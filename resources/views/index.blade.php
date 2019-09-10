@@ -4,8 +4,8 @@
 
     <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container slide-overlay" data-alias="classic4export" data-source="gallery">
 
-        <!-- START REVOLUTION SLIDER 5.4.8 auto mode -->
-        <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" data-version="5.4.8.1">
+    <!-- START REVOLUTION SLIDER 5.4.8 auto mode -->
+    <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" data-version="5.4.8.1">
             <ul>
                 @php $i = 0; @endphp
                 @foreach($sliders as $slider)
@@ -66,7 +66,7 @@
                        data-paddingtop="[20,20,15,12]"
                        data-paddingright="[30,30,25,20]"
                        data-paddingbottom="[20,20,15,12]"
-                       data-paddingleft="[30,30,25,20]">VIEW MORE DETAILS </a>
+                       data-paddingleft="[30,30,25,20]">Daha Fazla Detay . . .</a>
                 @endif
 
 
@@ -99,7 +99,6 @@
                                         </div>
                                         <div class="featured-desc">
                                             <p>We are a company providing a wide range of maintenance and many other services.</p>
-                                            <a class="ttm-btn ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor btn-inline mb-15" href="#">MORE SERVICES<i class="ti ti-angle-double-right"></i></a>
                                         </div>
                                     </div>
                                 </div><!-- featured-icon-box end-->
@@ -116,7 +115,6 @@
                                         </div>
                                         <div class="featured-desc">
                                             <p>We work to ensure people’s comfort at their home to provide the best and the fastest.</p>
-                                            <a class="ttm-btn ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor btn-inline mb-15" href="#">MORE ABOUT<i class="ti ti-angle-double-right"></i></a>
                                         </div>
                                     </div>
                                 </div><!-- featured-icon-box end-->
@@ -133,7 +131,6 @@
                                         </div>
                                         <div class="featured-desc">
                                             <p>We have been working for years to improve our skills, to expand the spheres of our work.</p>
-                                            <a class="ttm-btn ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor btn-inline mb-15" href="#">READ MORE<i class="ti ti-angle-double-right"></i></a>
                                         </div>
                                     </div>
                                 </div><!-- featured-icon-box end-->
@@ -153,7 +150,7 @@
                     <div class="col-md-5 col-sm-12">
                         <!-- ttm_single_image-wrapper -->
                         <div class="ttm_single_image-wrapper mb-35">
-                            <img class="img-fluid" src="images/single-img-one.png" alt="">
+                            <img class="img-fluid" src="{{Voyager::image(setting('corporate.image'))}}" alt="">
                         </div><!-- ttm_single_image-wrapper end -->
                     </div>
                     <div class="col-md-7 col-sm-12">
@@ -161,14 +158,11 @@
                             <!-- section title -->
                             <div class="section-title clearfix">
                                 <div class="title-header">
-                                    <h5>ABOUT BOLDMAN</h5>
-                                    <h2 class="title">We Build for Your Comfort</h2>
+                                    <h2 class="title">{{setting('corporate.title')}}</h2>
                                 </div>
                             </div><!-- section title end -->
-                            <p><strong>We are a team of professional and skilled experts in all domestic spheres. We offer a wide range of services and at the same time we are always glad to help you with any unconventional household needs:</strong></p>
-                            <p class="pt-10 pb-10">We work to ensure people’s comfort at their home, and to provide the best and the fastest help at fair prices. We stand for quality, safety and credibility, so you could be sure about our work. Initially we started as a company specializing in household maintenance. During our successful work we expanded our list of services. Now we are proud that we can help people with welding, moving, dry cleaning, landscaping and even pest control. Every member of our team is indeed good at his job and the company guarantees the quality of work.
-                            </p>
-                            <a class="ttm-btn ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor btn-inline mb-30" href="#">MORE ABOUT<i class="ti ti-angle-double-right"></i></a>
+                            <p><strong>{!! substr(strip_tags(setting('corporate.description')), 0, 200) !!} . . . </strong></p>
+                            <a class="ttm-btn ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor btn-inline mb-30" href="{{route('corporate')}}">Daha Fazla<i class="ti ti-angle-double-right"></i></a>
                             <div class="separator">
                                 <div class="sep-line mt_5 mb-35"></div>
                             </div>
@@ -182,7 +176,7 @@
                                         </div>
                                         <div class="featured-content">
                                             <div class="featured-title">
-                                                <h5>Ontime at Services</h5>
+                                                <h5>Zamanında Teslim</h5>
                                             </div>
                                         </div>
                                     </div><!-- featured-icon-box end-->
@@ -195,7 +189,7 @@
                                         </div>
                                         <div class="featured-content">
                                             <div class="featured-title">
-                                                <h5>24/7 Services</h5>
+                                                <h5>7/24<br>Hizmet</h5>
                                             </div>
                                         </div>
                                     </div><!-- featured-icon-box end-->
@@ -208,7 +202,7 @@
                                         </div>
                                         <div class="featured-content">
                                             <div class="featured-title">
-                                                <h5>Verified Professionals</h5>
+                                                <h5>Müşteri Memnuniyeti</h5>
                                             </div>
                                         </div>
                                     </div><!-- featured-icon-box end-->

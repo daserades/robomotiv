@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Boldman Infostack &raquo; Comments Feed HTML Template" />
     <meta name="author" content="https://www.themetechmount.com/" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Boldman &#8211; Handyman &amp; Renovation Services</title>
+    {!! SEOMeta::generate() !!}
 
     <!-- favicon icon -->
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" />
@@ -66,21 +65,21 @@
             <div class="container">
                 <div class="ttm-topbar-content">
                     <ul class="top-contact ttm-highlight-left text-left">
-                        <li><i class="fa fa-phone"></i><strong>Client Services:</strong> <span class="tel-no"> 0 (143) 456 7897</span></li>
+                       <li><i class="fa fa-phone"></i><strong>Müşteri Hizmetleri: </strong><span class="tel-no">{{setting('contact.phone')}}</span></li>
                     </ul>
                     <div class="topbar-right text-right">
                         <ul class="top-contact">
-                            <li><i class="fa fa-envelope-o"></i><strong>Email: </strong><a href="mailto:info@example.com.com">info@example.com</a></li>
+                            <li><i class="fa fa-envelope-o"></i><strong>E-Posta: </strong><a href="mailto:info@example.com.com">{{setting('contact.email')}}</a></li>
                         </ul>
                         <div class="ttm-social-links-wrapper list-inline">
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                <li><a href="{{setting('contact.facebook')}}" target="_blank"><i class="fa fa-facebook"></i></a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                <li><a href="{{setting('contact.twitter')}}" target="_blank"><i class="fa fa-twitter"></i></a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-flickr"></i></a>
+                                <li><a href="{{setting('contact.youtube')}}" target="_blank"><i class="fa fa-youtube"></i></a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                <li><a href="{{setting('contact.linkedin')}}" target="_blank"><i class="fa fa-linkedin"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -104,15 +103,10 @@
                             <!--site-navigation -->
                             <div id="site-navigation" class="site-navigation">
                                 <div class="header-btn">
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black" href="#">REQUEST QUOTE</a>
+                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black" href="#">TEKLİF İSTE</a>
                                 </div>
                                 <!-- header-icins -->
                                 <div class="ttm-header-icons ">
-                                        <span class="ttm-header-icon ttm-header-cart-link">
-                                            <a href="#"><i class="fa fa-shopping-cart"></i>
-                                                <span class="number-cart">0</span>
-                                            </a>
-                                        </span>
                                     <div class="ttm-header-icon ttm-header-search-link">
                                         <a href="#"><i class="ti ti-search"></i></a>
                                         <div class="ttm-search-overlay">
@@ -141,79 +135,13 @@
                                 </div>
                                 <nav id="menu" class="menu">
                                     <ul class="dropdown">
-                                        <li class="active"><a href="index.html">Home</a>
-                                            <ul>
-                                                <li class="active"><a href="index.html">Sample Homepage 1</a></li>
-                                                <li><a href="home-2.html">Sample Homepage 2</a></li>
-                                                <li><a href="home-3.html">Sample Homepage 3</a></li>
-                                                <li><a href="home-4.html">Sample Homepage 4  </a></li>
-                                                <li><a href="home-5.html">Sample Homepage 5  </a></li>
-                                                <li><a href="home-onepage.html">Sample Homepage One</a></li>
-                                                <li><a href="#">Header Styles</a>
-                                                    <ul>
-                                                        <li><a href="index.html">Header Classic</a></li>
-                                                        <li><a target="_blank" href="header-overlay.html">Header Overlay</a></li>
-                                                        <li><a target="_blank" href="header-infostack.html">Header Infostack</a></li>
-                                                        <li><a target="_blank" href="header-stackcenter.html">Header Stack Center</a></li>
-                                                        <li><a target="_blank" href="header-classic-info.html">Header Classic Info</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Pages</a>
-                                            <ul>
-                                                <li><a href="aboutus-1.html">About Us 1</a></li>
-                                                <li><a href="aboutus-2.html">About Us 2</a></li>
-                                                <li><a href="services-1.html">Service 1</a></li>
-                                                <li><a href="services-2.html">Service 2</a></li>
-                                                <li><a href="contact-us-1.html">Contact Us 1</a></li>
-                                                <li><a href="contact-us-2.html">Contact Us 2</a></li>
-                                                <li><a href="our-team.html">Our Team</a></li>
-                                                <li><a href="#">Shop</a>
-                                                    <ul>
-                                                        <li><a href="home-shop.html">Home Shop</a></li>
-                                                        <li><a href="product-details.html">Single Product Details</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="faq.html">FAQs</a></li>
-                                                <li><a href="career.html">Carrer</a></li>
-                                                <li><a href="error.html">Error Page</a></li>
-                                                <li><a href="element.html">Elements</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Services</a>
-                                            <ul>
-                                                <li><a href="renovation-and-painting.html">Renovation And Painting</a></li>
-                                                <li><a href="air-conditioner.html">Air Conditioner</a></li>
-                                                <li><a href="home-maintainance.html">Home Maintainance</a></li>
-                                                <li><a href="wiring-and-installation.html">Wiring And Installation</a></li>
-                                                <li><a href="plumber-services.html">Plumber Services</a></li>
-                                                <li><a href="painting-services.html">Painting Services</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Projects</a>
-                                            <ul>
-                                                <li><a href="portfolio-style-1.html">Project Style 1</a></li>
-                                                <li><a href="portfolio-style-2.html">Project Style 2</a></li>
-                                                <li><a href="#">Project Single</a>
-                                                    <ul>
-                                                        <li><a href="single-style-1.html">Style One</a></li>
-                                                        <li><a href="single-style-2.html">Style Two</a></li>
-                                                        <li><a href="single-style-3.html">Style Three</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">Blog Classic</a></li>
-                                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                <li><a href="blog-left-image.html">Blog Left Image</a></li>
-                                                <li><a href="single-blog.html">Single Blog View</a></li>
-                                            </ul>
-                                        </li>
+                                        <li class="active"><a href="{{route('index')}}"><i class="fa fa-home"></i></a></li>
+                                        <li><a href="{{route('corporate')}}">Kurumsal</a></li>
+                                        <li><a href="#">Ürünler</a></li>
+                                        <li><a href="#">Hizmetler</a></li>
+                                        <li><a href="#">Çalışmalar</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">İletişim</a></li>
                                     </ul>
                                 </nav>
                             </div><!-- site-navigation end-->
@@ -243,8 +171,8 @@
                                                 </div>
                                             </div>
                                             <div class="featured-title">
-                                                <h5>Subscribe To Our Newsletter</h5>
-                                                <h6>At vero eos et accusamus et iusto oddummy..</h6>
+                                                <h5>Bültenimize Abone Olun</h5>
+                                                <h6>Yeniliklerden Anında Haberiniz Olsun</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -252,8 +180,8 @@
                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 widget-area">
                                     <form id="subscribe-form" class="newsletter-form" method="post" action="#" data-mailchimp="true">
                                         <div class="mailchimp-inputbox clearfix" id="subscribe-content">
-                                            <p><input type="email" name="email" placeholder="Email Address.." required=""></p>
-                                            <p><input type="submit" value="SUBSCRIBE"></p>
+                                            <p><input type="email" name="email" placeholder="E-Posta" required=""></p>
+                                            <p><input type="submit" value="Abone Ol"></p>
                                         </div>
                                         <div id="subscribe-msg"></div>
                                     </form>
@@ -345,10 +273,10 @@
                     <div class="col-md-4 ttm-footer2-right">
                         <div class="social-icons">
                             <ul class="list-inline">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('contact.facebook')}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('contact.twitter')}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('contact.youtube')}}"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('contact.linkedin')}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>

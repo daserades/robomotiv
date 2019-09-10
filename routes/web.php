@@ -12,7 +12,7 @@
 */
 
 Route::get('/', ['as'=>'index', 'uses'=>'HomeCTRL@index']);
-
+Route::get('/kurumsal',['as'=>'corporate', 'uses'=>'HomeCTRL@corporate']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

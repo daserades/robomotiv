@@ -139,7 +139,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        /*TCG\Voyager\VoyagerServiceProvider::class,*/
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -190,6 +191,8 @@ return [
     */
 
     'aliases' => [
+
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
