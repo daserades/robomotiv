@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', ['as'=>'index', 'uses'=>'HomeCTRL@index']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });
