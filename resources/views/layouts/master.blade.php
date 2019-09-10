@@ -65,21 +65,21 @@
             <div class="container">
                 <div class="ttm-topbar-content">
                     <ul class="top-contact ttm-highlight-left text-left">
-                       <li><i class="fa fa-phone"></i><strong>Müşteri Hizmetleri: </strong><span class="tel-no">{{setting('contact.phone')}}</span></li>
+                       <li><i class="fa fa-phone"></i><strong>Müşteri Hizmetleri: </strong><span class="tel-no">{{setting('iletisim.phone')}}</span></li>
                     </ul>
                     <div class="topbar-right text-right">
                         <ul class="top-contact">
-                            <li><i class="fa fa-envelope-o"></i><strong>E-Posta: </strong><a href="mailto:info@example.com.com">{{setting('contact.email')}}</a></li>
+                            <li><i class="fa fa-envelope-o"></i><strong>E-Posta: </strong><a href="mailto:info@example.com.com">{{setting('iletisim.email')}}</a></li>
                         </ul>
                         <div class="ttm-social-links-wrapper list-inline">
                             <ul class="social-icons">
-                                <li><a href="{{setting('contact.facebook')}}" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <li><a href="{{setting('iletisim.facebook')}}" target="_blank"><i class="fa fa-facebook"></i></a>
                                 </li>
-                                <li><a href="{{setting('contact.twitter')}}" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <li><a href="{{setting('iletisim.twitter')}}" target="_blank"><i class="fa fa-twitter"></i></a>
                                 </li>
-                                <li><a href="{{setting('contact.youtube')}}" target="_blank"><i class="fa fa-youtube"></i></a>
+                                <li><a href="{{setting('iletisim.youtube')}}" target="_blank"><i class="fa fa-youtube"></i></a>
                                 </li>
-                                <li><a href="{{setting('contact.linkedin')}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                <li><a href="{{setting('iletisim.linkedin')}}" target="_blank"><i class="fa fa-linkedin"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -96,8 +96,8 @@
                         <div class="container">
                             <!-- site-branding -->
                             <div class="site-branding">
-                                <a class="home-link" href="index.html" title="Boldman" rel="home">
-                                    <img id="logo-img" class="img-center" src="images/logo-img.png" alt="logo-img">
+                                <a class="home-link" href="{{route('index')}}" title="Boldman" rel="home">
+                                    <img id="logo-img" class="img-center" src="{{asset('images/logo-img.png')}}" alt="logo-img">
                                 </a>
                             </div><!-- site-branding end -->
                             <!--site-navigation -->
@@ -137,11 +137,11 @@
                                     <ul class="dropdown">
                                         <li class="active"><a href="{{route('index')}}"><i class="fa fa-home"></i></a></li>
                                         <li><a href="{{route('corporate')}}">Kurumsal</a></li>
-                                        <li><a href="#">Ürünler</a></li>
-                                        <li><a href="#">Hizmetler</a></li>
-                                        <li><a href="#">Çalışmalar</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">İletişim</a></li>
+                                        <li><a href="{{--{{route('products')}}--}}">Ürünler</a></li>
+                                        <li><a href="{{--{{route('services')}}--}}">Hizmetler</a></li>
+                                        <li><a href="{{--{{route('projects')}}--}}">Çalışmalar</a></li>
+                                        <li><a href="{{route('blogs')}}">Blog</a></li>
+                                        <li><a href="{{route('contact')}}">İletişim</a></li>
                                     </ul>
                                 </nav>
                             </div><!-- site-navigation end-->
@@ -273,10 +273,10 @@
                     <div class="col-md-4 ttm-footer2-right">
                         <div class="social-icons">
                             <ul class="list-inline">
-                                <li><a href="{{setting('contact.facebook')}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('contact.twitter')}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('contact.youtube')}}"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('contact.linkedin')}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('iletisim.twitter')}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('iletisim.youtube')}}"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('iletisim.linkedin')}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>

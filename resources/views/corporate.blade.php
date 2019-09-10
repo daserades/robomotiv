@@ -56,7 +56,7 @@
                     <div class="col-lg-5 col-sm-12">
                         <!-- ttm_single_image-wrapper -->
                         <div class="ttm_single_image-wrapper mb-35">
-                            <img class="img-fluid" src="{{Voyager::image(setting('corporate.image'))}}" alt="">
+                            <img class="img-fluid" src="{{Voyager::image(setting('kurumsal.image'))}}" alt="">
                         </div><!-- ttm_single_image-wrapper end -->
                     </div>
                     <div class="col-lg-7 col-sm-12">
@@ -64,10 +64,10 @@
                             <!-- section title -->
                             <div class="section-title clearfix">
                                 <div class="title-header">
-                                    <h2 class="title">{{setting('corporate.title')}}</h2>
+                                    <h2 class="title">{{setting('kurumsal.title')}}</h2>
                                 </div>
                             </div><!-- section title end -->
-                            <p><strong>{!! setting('corporate.description') !!}</strong></p>
+                            <p><strong>{!! setting('kurumsal.description') !!}</strong></p>
                         </div>
                     </div>
                 </div><!-- row end-->
@@ -104,7 +104,7 @@
 
 
         <!-- fid-section -->
-        <section class="ttm-row fid2-section bg-img13 ttm-bgcolor-skincolor ttm-bg ttm-bgimage-yes clearfix">
+        <section class="ttm-row fid2-section ttm-bgcolor-skincolor ttm-bg ttm-bgimage-yes clearfix">
             <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
             <div class="container">
                 <div class="row ttm-facts-colum-sep">
@@ -114,13 +114,13 @@
                             <div class="ttm-fid-contents">
                                 <h4><span   data-appear-animation = "animateDigits"
                                             data-from             = "0"
-                                            data-to               = "3245"
-                                            data-interval         = "10"
+                                            data-to               = "{{setting('neden-biz.year')}}"
+                                            data-interval         = "1"
                                             data-before           = ""
                                             data-before-style     = "sup"
                                             data-after            = ""
                                             data-after-style      = "sub"
-                                    >3245
+                                    >
                                     </span>
                                 </h4>
                                 <h3 class="ttm-fid-title"><span>YIL<br></span></h3>
@@ -133,14 +133,14 @@
                             <div class="ttm-fid-contents">
                                 <h4><span   data-appear-animation = "animateDigits"
                                             data-from             = "0"
-                                            data-to               = "35"
+                                            data-to               = "{{setting('neden-biz.customer')}}"
                                             data-interval         = "10"
                                             data-before           = ""
                                             data-before-style     = "sup"
                                             data-after            = ""
                                             data-after-style      = "sub"
-                                    >35
-                                    </span>
+                                    >
+                                    </span>+
                                 </h4>
                                 <h3 class="ttm-fid-title"><span>Müşteri<br></span></h3>
                             </div><!-- ttm-fid-contents end-->
@@ -152,14 +152,14 @@
                             <div class="ttm-fid-contents">
                                 <h4><span   data-appear-animation = "animateDigits"
                                             data-from             = "0"
-                                            data-to               = "215"
-                                            data-interval         = "10"
+                                            data-to               = "{{setting('neden-biz.project')}}"
+                                            data-interval         = "5"
                                             data-before           = ""
                                             data-before-style     = "sup"
                                             data-after            = ""
                                             data-after-style      = "sub"
-                                    >215
-                                    </span>
+                                    >
+                                    </span>+
                                 </h4>
                                 <h3 class="ttm-fid-title"><span>PROJE<br></span></h3>
                             </div><!-- ttm-fid-contents end -->

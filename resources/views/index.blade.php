@@ -11,7 +11,7 @@
                 @foreach($sliders as $slider)
                 <li data-index="rs-@if($i==0){{$i}}@endif" data-transition="slotslide-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
-                    <img src="{{Voyager::image($slider->image)}}" alt="" title="slider-mainbg-001" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <img src="{{Voyager::image($slider->thumbnail('cropped'))}}" alt="" title="slider-mainbg-001" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 
                     <div class="tp-caption tp-resizeme" id="slide-3-layer-2" data-x="['left','left','center','center']" data-hoffset="['49','39','0','0']" data-y="['top','top','middle','middle']"  data-voffset="['230','179','-136','-86']"
 
@@ -150,7 +150,7 @@
                     <div class="col-md-5 col-sm-12">
                         <!-- ttm_single_image-wrapper -->
                         <div class="ttm_single_image-wrapper mb-35">
-                            <img class="img-fluid" src="{{Voyager::image(setting('corporate.image'))}}" alt="">
+                            <img class="img-fluid" src="{{Voyager::image(setting('kurumsal.image'))}}" alt="">
                         </div><!-- ttm_single_image-wrapper end -->
                     </div>
                     <div class="col-md-7 col-sm-12">
@@ -158,10 +158,10 @@
                             <!-- section title -->
                             <div class="section-title clearfix">
                                 <div class="title-header">
-                                    <h2 class="title">{{setting('corporate.title')}}</h2>
+                                    <h2 class="title">{{setting('kurumsal.title')}}</h2>
                                 </div>
                             </div><!-- section title end -->
-                            <p><strong>{!! substr(strip_tags(setting('corporate.description')), 0, 200) !!} . . . </strong></p>
+                            <p><strong>{!! substr(strip_tags(setting('kurumsal.description')), 0, 200) !!} . . . </strong></p>
                             <a class="ttm-btn ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor btn-inline mb-30" href="{{route('corporate')}}">Daha Fazla<i class="ti ti-angle-double-right"></i></a>
                             <div class="separator">
                                 <div class="sep-line mt_5 mb-35"></div>

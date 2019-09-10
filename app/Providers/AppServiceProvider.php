@@ -23,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /*view()->composer(['blogs', 'blogs_category', 'blog_detail'], function ($view){
+            $view->with('popular_posts', Blog::popularLast(3)->limit(6)->get());
+        });*/
     }
 }
