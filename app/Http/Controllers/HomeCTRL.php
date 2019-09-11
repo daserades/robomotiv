@@ -38,7 +38,7 @@ class HomeCTRL extends Controller
 
     public function products()
     {
-        $products = Product::orderBy('id', 'DESC')->paginate(6);
+        $products = Product::orderBy('id', 'DESC')->paginate(2);
         $categories = Pcategory::all();
         return view('products', compact('products', 'categories'));
     }
@@ -46,7 +46,8 @@ class HomeCTRL extends Controller
     public function products_category($category)
     {
         $category = Pcategory::whereSlug($category)->firstOrFail();
-        $products = Product::with('category')->where('category_id', $category->id)->orderBy('id', 'DESC')->paginate(6);
+
+        $products = Product::with('category')->where('category_id', $category->id)->orderBy('id', 'DESC')->paginate(8);
 
         $categories = Pcategory::all();
         return view('products', compact('products', 'categories', 'category'));
