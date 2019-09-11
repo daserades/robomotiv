@@ -62,7 +62,7 @@
                                     <div class="ttm-box-post-date">
                                     <span class="ttm-entry-date">
                                         <time class="entry-date" datetime="2019-01-16T07:07:55+00:00">{{$blog->created_at->format('d')}}
-                                            <span class="entry-month entry-year">{{$blog->created_at->formatLocalized('$b')}}</span></time>
+                                            <span class="entry-month entry-year">{{$blog->created_at->formatLocalized('%b')}}</span></time>
                                     </span>
                                     </div>
                                 </div>

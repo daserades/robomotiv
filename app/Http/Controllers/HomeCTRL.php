@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Bcategory;
 use App\Blog;
 use App\Corporate;
+use App\Information;
+use App\Pcategory;
+use App\Product;
 use App\Project;
 use App\Service;
 use App\Slider;
@@ -35,17 +38,28 @@ class HomeCTRL extends Controller
 
     public function products()
     {
-        return view('products');
+        $products = Product::orderBy('id', 'DESC')->paginate(6);
+        $categories = Pcategory::all();
+        return view('products', compact('products', 'categories'));
     }
 
     public function products_category($category)
     {
-        return view('products');
+        $category = Pcategory::whereSlug($category)->firstOrFail();
+        $products = Product::with('category')->where('category_id', $category->id)->orderBy('id', 'DESC')->paginate(6);
+
+        $categories = Pcategory::all();
+        return view('products', compact('products', 'categories', 'category'));
     }
 
     public function product_detail($category, $slug)
     {
-        return view('project_detail');
+        $category = Pcategory::whereSlug($category)->firstOrFail();
+        $product = Product::with('category')->where('category_id', $category->id)->whereSlug($slug)->firstOrFail();
+        $product_property = Information::with('category')->where('category_id', $category->id)->whereSlug($slug)->firstOrFail();
+        $categories = Pcategory::all();
+
+        return view('project_detail', compact('product', 'categories', 'product_property'));
     }
 
     public function services()

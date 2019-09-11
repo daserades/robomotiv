@@ -113,6 +113,14 @@
                                     <li class="social-linkedin"><a href="{{setting('iletisim.linkedin')}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
+                            {{--<div class="ttm-nextprev-bottom-nav">
+                                <nav class="navigation post-navigation">
+                                    <div class="nav-links">
+                                        <div class="nav-previous"><a href="#" rel="prev"><span class="meta-nav" aria-hidden="true">Geri</span></a></div>
+                                        <div class="nav-next float-right"><a href="{{$project->}}" rel="next"><span class="meta-nav" aria-hidden="true">İleri</span></a></div>
+                                    </div>
+                                </nav>
+                            </div>--}}
                             <div class="ttm-nextprev-bottom-nav">
                                 <nav class="navigation post-navigation">
 
