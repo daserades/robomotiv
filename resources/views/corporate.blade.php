@@ -9,14 +9,14 @@
                 <div class="col-md-12">
                     <div class="title-box ttm-textcolor-white">
                         <div class="page-title-heading">
-                            <h1 class="title">Kurumsal</h1>
+                            <h1 class="title">KURUMSAL</h1>
                         </div><!-- /.page-title-captions -->
                         <div class="breadcrumb-wrapper">
                                 <span>
                                     <a title="Homepage" href="{{route('index')}}"><i class="ti ti-home"></i></a>
                                 </span>
                             <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
-                            <span><span>About Us 1</span></span>
+                            <span><span>Kurumsal</span></span>
                         </div>
                     </div>
                 </div><!-- /.col-md-12 -->

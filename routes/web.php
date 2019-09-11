@@ -14,6 +14,11 @@
 Route::get('/', ['as'=>'index', 'uses'=>'HomeCTRL@index']);
 Route::get('/kurumsal',['as'=>'corporate', 'uses'=>'HomeCTRL@corporate']);
 
+Route::get('/hizmetler', ['as'=>'services', 'uses'=>'HomeCTRL@services']);
+Route::get('/hizmetler/{slug}', ['as'=>'service_detail', 'uses'=>'HomeCTRL@service_detail']);
+
+Route::get('/projeler', ['as'=>'projects', 'uses'=>'HomeCTRL@projects']);
+Route::get('/project/{slug}', ['as'=>'project_detail', 'uses'=>'HomeCTRL@project_detail']);
 
 Route::get('/bloglar', ['as'=>'blogs', 'uses'=>'HomeCTRL@blogs']);
 Route::get('/bloglar/{category}', ['as'=>'blogs_category', 'uses'=>'HomeCTRL@blogs_category']);

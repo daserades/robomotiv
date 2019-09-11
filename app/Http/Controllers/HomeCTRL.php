@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Bcategory;
 use App\Blog;
 use App\Corporate;
+use App\Project;
+use App\Service;
 use App\Slider;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
@@ -29,6 +31,31 @@ class HomeCTRL extends Controller
         return view('corporate', compact('corporates'));
     }
 
+    public function services()
+    {
+        $services = Service::orderBy('id', 'DESC')->get();
+        return view('services', compact('services'));
+    }
+
+    public function service_detail($slug)
+    {
+        $service = Service::whereSlug($slug)->firstOrFail();
+        $services = Service::limit(6)->orderBy('created_at', 'DESC')->get();
+        return view('service_detail', compact('service', 'services'));
+    }
+
+    public function projects()
+    {
+        $projects = Project::all();
+        return view('projects', compact('projects'));
+    }
+
+    public function project_detail($slug)
+    {
+        $project = Project::whereSlug($slug)->firstOrFail();
+        $projects = Project::inRandomOrder()->first();
+        return view('project_detail', compact('project', 'projects'));
+    }
 
     public function blogs()
     {
@@ -40,17 +67,17 @@ class HomeCTRL extends Controller
     public function blogs_category($category)
     {
         $category = Bcategory::whereSlug($category)->firstOrFail();
-        $blogs = Blog::with('category')->where('category_id', $category->id)->paginate(6);
+        $blogs = Blog::with('category')->where('category_id', $category->id)->orderBy('id', 'DESC')->paginate(6);
 
         $categories = Bcategory::all();
 
-        return view('blogs', compact('blogs', 'categories'));
+        return view('blogs', compact('blogs', 'categories', 'category'));
     }
 
     public function blog_detail($category, $slug)
     {
         $category = Bcategory::whereSlug($category)->firstOrFail();
-        $blog = Blog::with('category')->whereSlug($slug)->get();
+        $blog = Blog::with('category')->where('category_id', $category->id)->whereSlug($slug)->firstOrFail();
         $categories = Bcategory::all();
 
         return view('blog_detail', compact('blog', 'categories'));
