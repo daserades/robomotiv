@@ -12,7 +12,12 @@
 */
 
 Route::get('/', ['as'=>'index', 'uses'=>'HomeCTRL@index']);
+
 Route::get('/kurumsal',['as'=>'corporate', 'uses'=>'HomeCTRL@corporate']);
+
+Route::get('/urunler', ['as'=>'products', 'uses'=>'HomeCTRL@products']);
+Route::get('/urunler/{category}', ['as'=>'products_category', 'uses'=>'HomeCTRL@products_category']);
+Route::get('/urunler/{category}/{slug}', ['as'=>'product_detail', 'uses'=>'HomeCTRL@product_detail']);
 
 Route::get('/hizmetler', ['as'=>'services', 'uses'=>'HomeCTRL@services']);
 Route::get('/hizmetler/{slug}', ['as'=>'service_detail', 'uses'=>'HomeCTRL@service_detail']);

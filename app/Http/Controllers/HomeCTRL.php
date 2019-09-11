@@ -31,6 +31,21 @@ class HomeCTRL extends Controller
         return view('corporate', compact('corporates'));
     }
 
+    public function products()
+    {
+        return view('products');
+    }
+
+    public function products_category($category)
+    {
+        return view('products');
+    }
+
+    public function product_detail($category, $slug)
+    {
+        return view('project_detail');
+    }
+
     public function services()
     {
         $services = Service::orderBy('id', 'DESC')->get();
@@ -53,7 +68,9 @@ class HomeCTRL extends Controller
     public function project_detail($slug)
     {
         $project = Project::whereSlug($slug)->firstOrFail();
-        $projects = Project::inRandomOrder()->first();
+        $projects = Project::where('id', '!=', $project->id)->inRandomOrder()->limit(2)->get();
+
+
         return view('project_detail', compact('project', 'projects'));
     }
 

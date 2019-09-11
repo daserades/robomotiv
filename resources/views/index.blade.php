@@ -52,7 +52,7 @@
                          data-paddingleft="[0,0,0,0]" >  {!! substr(strip_tags($slider->description), 0, 80) !!}...  </div>
 
                 @if($slider->link != null)
-                    <a class="tp-caption skin-flat-button tp-resizeme" href="#" target="_self" id="slide-3-layer-9" data-x="['left','left','center','center']" data-hoffset="['50','40','0','0']" data-y="['top','top','middle','middle']" data-voffset="['452','462','121','69']"
+                    <a class="tp-caption skin-flat-button tp-resizeme" href="{{$slider->link}}" target="_self" id="slide-3-layer-9" data-x="['left','left','center','center']" data-hoffset="['50','40','0','0']" data-y="['top','top','middle','middle']" data-voffset="['452','462','121','69']"
                        data-fontsize="['13','13','12','11']"
                        data-lineheight="['13','13','12','11']"
                        data-width="none"

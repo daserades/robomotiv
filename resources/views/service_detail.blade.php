@@ -10,7 +10,7 @@
                 <div class="col-md-12">
                     <div class="title-box ttm-textcolor-white">
                         <div class="page-title-heading">
-                            <h1 class="title">{{strtoupper($service->title)}}</h1>
+                            <h1 class="title">HİZMETLER</h1>
                         </div><!-- /.page-title-captions -->
                         <div class="breadcrumb-wrapper">
                                 <span>
@@ -73,7 +73,6 @@
                                 </div>
                             </div><!-- section title end -->
                             <div class="ttm-service-description">
-                                <h4>Bilgilendirme</h4>
                                 <div class="mb-35">
                                     <p>{!! $service->description !!}</p>
                                 </div>

@@ -137,7 +137,7 @@
                                     <ul class="dropdown">
                                         <li class="active"><a href="{{route('index')}}"><i class="fa fa-home"></i></a></li>
                                         <li><a href="{{route('corporate')}}">Kurumsal</a></li>
-                                        <li><a href="{{--{{route('products')}}--}}">Ürünler</a></li>
+                                        <li><a href="{{route('products')}}">Ürünler</a></li>
                                         <li><a href="{{route('services')}}">Hizmetler</a></li>
                                         <li><a href="{{route('projects')}}">Çalışmalar</a></li>
                                         <li><a href="{{route('blogs')}}">Blog</a></li>

@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <div class="title-box ttm-textcolor-white">
                         <div class="page-title-heading">
-                            <h1 class="title">{{strtoupper($blog->title)}}</h1>
+                            <h1 class="title">BLOGLAR</h1>
                         </div><!-- /.page-title-captions -->
                         <div class="breadcrumb-wrapper">
                             <span>

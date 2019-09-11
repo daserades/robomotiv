@@ -10,14 +10,18 @@
                 <div class="col-md-12">
                     <div class="title-box ttm-textcolor-white">
                         <div class="page-title-heading">
-                            <h1 class="title">{{$project->title}}</h1>
+                            <h1 class="title">ÇALIŞMALAR</h1>
                         </div><!-- /.page-title-captions -->
                         <div class="breadcrumb-wrapper">
                                 <span>
                                     <a title="Homepage" href="{{route('index')}}"><i class="ti ti-home"></i></a>
                                 </span>
                             <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
-                            <span><span>Tiles Repair, Austin</span></span>
+                            <span>
+                                <a title="Homepage" href="{{route('projects')}}">Çalışmalar</a>
+                            </span>
+                            <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                            <span><span>{{$project->title}}</span></span>
                         </div>
                     </div>
                 </div><!-- /.col-md-12 -->
@@ -51,7 +55,7 @@
                                                 <li class="ttm-pf-details-date">
                                                     <i class="fa fa-briefcase"></i>
                                                     <span class="ttm-pf-left-details">Proje İsmi</span>
-                                                    <span class="ttm-pf-right-details">{{$project->name}}</span>
+                                                    <span class="ttm-pf-right-details">{{$project->title}}</span>
                                                 </li>
                                                 <li class="ttm-pf-details-date">
                                                     <i class="fa fa-user"></i>
@@ -122,33 +126,29 @@
                     <div class="col-lg-12">
                         <h3 class="ttm-pf-single-related-title">Diğer Projelerimiz</h3>
                     </div>
-                    {{--@foreach($projects as $project)--}}
+                    @foreach($projects as $project)
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <!-- featured-imagebox -->
                         <div class="featured-imagebox featured-imagebox-portfolio ttm-box-view-top-image">
                             <div class="ttm-box-view-content-inner">
                                 <!-- featured-thumbnail -->
                                 <div class="featured-thumbnail">
-                                    <a href="#"> <img class="img-fluid" src="" alt="image"></a>
+                                    <a href="{{Voyager::image($project->thumbnail('cropped'))}}"> <img class="img-fluid" src="{{Voyager::image($project->thumbnail('cropped'))}}" alt="image"></a>
                                 </div><!-- featured-thumbnail end-->
                                 <!-- ttm-box-view-overlay -->
                                 <div class="ttm-box-view-overlay">
                                     <div class="featured-iconbox ttm-media-link">
-                                        <a class="ttm_prettyphoto ttm_image" title="Plumbing, New York" data-rel="prettyPhoto" href=""><i class="ti ti-search"></i></a>
-                                        <a href="portfolio-style-1.html" class="ttm_link"><i class="ti ti-link"></i></a>
+                                        <a class="ttm_prettyphoto ttm_image" title="{{$project->title}}" data-rel="prettyPhoto" href="{{Voyager::image($project->thumbnail('cropped'))}}"><i class="ti ti-search"></i></a>
+                                        <a href="{{route('project_detail', ['slug'=>$project->slug])}}" class="ttm_link"><i class="ti ti-link"></i></a>
                                     </div>
                                 </div><!-- ttm-box-view-overlay end-->
                             </div>
                             <div class="ttm-box-bottom-content featured-content-portfolio box-shadow2">
-                                <span class="category">
-                                    <a href="portfolio-category.html">Painting</a>,
-                                    <a href="portfolio-category.html">Plumbing</a>
-                                </span>
-                                <h2 class="featured-title"><a href="portfolio-style-1.html">{{$projects->title}}</a></h2>
+                                <h2 class="featured-title"><a href="{{route('project_detail', ['slug'=>$project->slug])}}">{{$project->title}}</a></h2>
                             </div>
                         </div><!-- featured-imagebox -->
                     </div>
-                    {{--@endforeach--}}
+                    @endforeach
                 </div>
                 <!-- tttm-pf-single-related-wrapper end-->
             </div>
