@@ -18,10 +18,12 @@ class HomeCTRL extends Controller
     public function index()
     {
         $sliders = Slider::all();
+        $projects = Project::limit(9)->orderBy('id', 'DESC')->get();
+        $blogs = Blog::limit(4)->orderBy('id', 'DESC')->get();
         SEOMeta::setTitle('Anasayfa');
         SEOMeta::setDescription('Linmak Firması resmi web sitesi');
 
-        return view('index', compact('sliders'));
+        return view('index', compact('sliders', 'projects', 'blogs'));
     }
 
     public function corporate()
@@ -61,7 +63,7 @@ class HomeCTRL extends Controller
 
     public function projects()
     {
-        $projects = Project::all();
+        $projects = Project::orderBy('id', 'DESC')->get();
         return view('projects', compact('projects'));
     }
 
