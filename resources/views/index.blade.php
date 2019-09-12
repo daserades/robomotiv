@@ -68,8 +68,6 @@
                        data-paddingbottom="[20,20,15,12]"
                        data-paddingleft="[30,30,25,20]">Daha Fazla Detay . . .</a>
                 @endif
-
-
                 </li>
                     @php $i++; @endphp
                 @endforeach
