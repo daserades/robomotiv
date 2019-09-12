@@ -23,28 +23,29 @@
                                 <h2 class="title">İletişim Formu</h2>
                             </div>
                         </div><!-- section title end -->
-                        <form id="ttm-contactform" class="ttm-contactform wrap-form clearfix" method="post" action="#">
+                        <form id="ttm-contactform" class="ttm-contactform wrap-form clearfix" method="post" action="{{route('contact_post')}}">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i><input name="your-name" type="text" value="" placeholder="İsim - Soyisim" required="required"></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i><input name="name" type="text" value="" placeholder="İsim - Soyisim" required="required"></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="your-phone" type="text" value="" placeholder="GSM" required="required"></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="GSM" type="text" value="" placeholder="GSM" required="required"></span>
                                     </label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i><input name="email" type="email" value="" placeholder="E-Posta" required="required"></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i><input name="mail" type="email" value="" placeholder="E-Posta" required="required"></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-location-pin"></i><input name="venue" type="text" value="" placeholder="Şehir" required="required"></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-location-pin"></i><input name="city" type="text" value="" placeholder="Şehir" required="required"></span>
                                     </label>
                                 </div>
                             </div>

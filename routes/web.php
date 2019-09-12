@@ -30,6 +30,7 @@ Route::get('/bloglar/{category}', ['as'=>'blogs_category', 'uses'=>'HomeCTRL@blo
 Route::get('/bloglar/{category}/{slug}', ['as'=>'blog_detail', 'uses'=>'HomeCTRL@blog_detail']);
 
 Route::get('/iletisim', ['as'=>'contact', 'uses'=>'HomeCTRL@contact']);
+Route::post('/iletisim_post', ['as'=>'contact_post', 'uses'=>'HomeCTRL@contact_post']);
 
 Route::get('/arama', ['as'=>'search_get', 'uses'=>'HomeCTRL@search_get']);
 Route::post('/arama', ['as'=>'search', 'uses'=>'HomeCTRL@search']);

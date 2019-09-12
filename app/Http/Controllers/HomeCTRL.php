@@ -21,12 +21,14 @@ class HomeCTRL extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        $projects = Project::limit(9)->orderBy('id', 'DESC')->get();
+        $projects = Project::limit(6)->orderBy('id', 'DESC')->get();
         $blogs = Blog::limit(4)->orderBy('id', 'DESC')->get();
+        $products = Product::limit(4)->orderBy('id', 'DESC')->get();
+        $services = Service::limit(3)->orderBy('id', 'DESC')->get();
         SEOMeta::setTitle('Anasayfa');
         SEOMeta::setDescription('Linmak Firması resmi web sitesi');
 
-        return view('index', compact('sliders', 'projects', 'blogs'));
+        return view('index', compact('sliders', 'projects', 'blogs', 'products', 'services'));
     }
 
     public function corporate()
@@ -157,6 +159,25 @@ class HomeCTRL extends Controller
         SEOMeta::setDescription('İletişim bölümünden firmamızla iletişime geçebilir teknik destek talebi oluşturabilir ve diğer konular hakkında bilgi alabilirsiniz.');
 
         return view('contact');
+    }
+
+    public function contact_post(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'mail' => 'required',
+            'gsm' => 'required',
+            'city' => 'required',
+            'message' => 'required',
+        ]);
+        //burası iletisim
+        // burası master
+        Mail::to(setting('iletisim.mail'))->send(new Iletisim($request));
+
+
+        return view('success')
+            ->with('title', 'Mail Gönderildi')
+            ->with('message', 'Girmiş olduğunuz bilgiler başarılı bir şekilde firmamıza ulaşmıştır. Gerek görüldüğü takdirde size geridönüş yapılacaktır. ');
     }
 
     public function search_get()
