@@ -32,6 +32,8 @@ Route::get('/bloglar/{category}/{slug}', ['as'=>'blog_detail', 'uses'=>'HomeCTRL
 Route::get('/iletisim', ['as'=>'contact', 'uses'=>'HomeCTRL@contact']);
 
 
+Route::post('/arama', ['as'=>'search', 'uses'=>'HomeCTRL@search']);
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

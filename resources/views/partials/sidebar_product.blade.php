@@ -1,8 +1,9 @@
 <aside class="widget widget-search">
-    <form role="search" method="get" class="search-form  box-shadow" action="#">
+    <form role="search" method="post" class="search-form  box-shadow" action="{{route('search')}}">
+        @csrf
         <label>
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="input-text" placeholder="Search …" value="" name="s">
+            <input type="search" class="input-text" placeholder="Search …" value="" name="keyword">
         </label>
         <input type="submit" class="search-submit" value="Search">
     </form>
@@ -18,20 +19,13 @@
 <aside class="widget widget-recent-post">
     <h3 class="widget-title">Popüler Ürünler</h3>
     <ul class="ttm-recent-post-list">
+        @foreach($popular_products as $product)
         <li class="ttm-recent-post-list-li clearfix">
-            <a href="single-blog.html"><img class="img-fluid" src="{{asset('images/portfolio/post-three-1200x800.jpg')}}" alt="blog-img"></a>
-            <span class="post-date">January 16, 2019</span>
-            <a href="single-blog.html">Equipping Researchers in the Developing.</a>
+            <a href="{{route('product_detail', ['category'=>$product->category->slug, 'slug'=>$product->slug])}}">
+                <img class="img-fluid" src="{{Voyager::image($product->thumbnail('cropped'))}}" alt="product-img"></a>
+            <span class="post-date">{{$product->created_at->format('d-m-Y')}}</span>
+            <a href="{{route('product_detail', ['category'=>$product->category->slug, 'slug'=>$product->slug])}}">{{$product->title}}</a>
         </li>
-        <li class="ttm-recent-post-list-li clearfix">
-            <a href="single-blog.html"><img class="img-fluid" src="{{asset('images/portfolio/post-four-1200x800.jpg')}}" alt="blog-img"></a>
-            <span class="post-date">February 5, 2019</span>
-            <a href="single-blog.html">Simple Steps for Replacing old Tiling</a>
-        </li>
-        <li class="ttm-recent-post-list-li clearfix">
-            <a href="single-blog.html"><img class="img-fluid" src="{{asset('images/portfolio/post-five-1200x800.jpg')}}" alt="blog-img"></a>
-            <span class="post-date">January 31, 2019</span>
-            <a href="single-blog.html">Danger of Having High Water Pressure</a>
-        </li>
+        @endforeach
     </ul>
 </aside>

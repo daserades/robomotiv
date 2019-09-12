@@ -69,7 +69,7 @@
                     </ul>
                     <div class="topbar-right text-right">
                         <ul class="top-contact">
-                            <li><i class="fa fa-envelope-o"></i><strong>E-Posta: </strong><a href="mailto:info@example.com.com">{{setting('iletisim.email')}}</a></li>
+                            <li><i class="fa fa-envelope-o"></i><strong>E-Posta: </strong><a href="mailto:{{setting('iletisim.email')}}">{{setting('iletisim.email')}}</a></li>
                         </ul>
                         <div class="ttm-social-links-wrapper list-inline">
                             <ul class="social-icons">
@@ -110,11 +110,12 @@
                                     <div class="ttm-header-icon ttm-header-search-link">
                                         <a href="#"><i class="ti ti-search"></i></a>
                                         <div class="ttm-search-overlay">
-                                            <form method="get" class="ttm-site-searchform" action="#">
+                                            <form method="post" class="ttm-site-searchform" action="{{route('search')}}">
+                                                @csrf
                                                 <div class="w-search-form-h">
                                                     <div class="w-search-form-row">
                                                         <div class="w-search-input">
-                                                            <input type="search" class="field searchform-s" name="s" placeholder="Type Word Then Enter...">
+                                                            <input type="search" class="field searchform-s" name="keyword" placeholder="Arama  . . .">
                                                             <button type="submit">
                                                                 <i class="ti ti-search"></i>
                                                             </button>
@@ -200,48 +201,30 @@
                             <div class="footer-logo">
                                 <img id="footer-logo-img" class="img-center" src="images/footer-logo.png" alt="">
                             </div>
-                            <p>We work to ensure people’s com fort at their company specializing in house holance. During ourour</p>
-                        </div>
-                        <div class="widget widget_text clearfix">
-                            <h3 class="widget-title">Work Days</h3>
-                            <div class="textwidget widget-text">
-                                <div class="ttm-pricelistbox-wrapper ">
-                                    <div class="ttm-timelist-block-wrapper">
-                                        <ul class="ttm-timelist-block">
-                                            <li>Mon - sat <span class="service-time">09am - 05pm</span></li>
-                                            <li>Sunday<span class="service-time"><strong>Closed</strong></span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <p>{{setting('footer-alani.description')}}</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget widget_nav_menu clearfix">
-                            <h3 class="widget-title">Our Services</h3>
+                            <h3 class="widget-title">Faydalı Linkler</h3>
                             <ul id="menu-footer-services">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="services-1.html">Services</a></li>
-                                <li><a href="about-1.html">About</a></li>
-                                <li><a href="portfolio-style-1.html">Gallery</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="our-team.html">Team</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="career.html">Carrer</a></li>
-                                <li><a href="contact-us-1.html">Contact Us</a></li>
-                                <li><a href="single-style-3.html">Projects</a></li>
-                                <li><a href="contact-us-2.html">Locations</a></li>
-                                <li><a href="home-shop.html">Shop</a></li>
+                                <li><a href="{{route('index')}}">Anasayfa</a></li>
+                                <li><a href="{{route('corporate')}}">Kurumsal</a></li>
+                                <li><a href="{{route('products')}}">Ürünler</a></li>
+                                <li><a href="{{route('services')}}">Hizmetler</a></li>
+                                <li><a href="{{route('projects')}}">Çalışmalar</a></li>
+                                <li><a href="{{route('blogs')}}">Bloglar</a></li>
+                                <li><a href="{{route('contact')}}">İletişim</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget widget_text clearfix">
-                            <h3 class="widget-title">Get Free Estimate</h3>
+                            <h3 class="widget-title">Sorularınız İçin</h3>
                             <div class="textwidget widget-text">
-                                <h3 class="ttm-textcolor-skincolor">123-456-78910</h3>
-                                <p>Our online scheduling and payment system is safe.</p>
-                                <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-white mt-15 mb-20" href="#">REQUEST WITH ONLINE FORM</a>
+                                <h4 class="ttm-textcolor-skincolor"><a style="color: #fda12b;" href="tel:{{setting('iletisim.phone')}}">{{setting('iletisim.phone')}}</a></h4>
+                                <h6 class="ttm-textcolor-skincolor"><a style="color: #fda12b;" href="mailto:{{setting('iletisim.email')}}">{{setting('iletisim.email')}}</a></h6>
+                                <p>Ürünler hakkında bilgi almak için email ve telefon adreslerinden firmamız ile iletişime geçebilirsiniz.</p>
                             </div>
                         </div>
                     </div>
@@ -268,7 +251,7 @@
             <div class="container">
                 <div class="row copyright">
                     <div class="col-md-8 ttm-footer2-left">
-                        <span>Copyright © 2019&nbsp;<a href="#">Boldman Infostack</a>. All rights reserved.</span>
+                        <span>Copyright © {{date('Y')}}&nbsp;{{setting('footer-alani.copy')}}</span>
                     </div>
                     <div class="col-md-4 ttm-footer2-right">
                         <div class="social-icons">

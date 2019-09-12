@@ -32,6 +32,7 @@ class HomeCTRL extends Controller
     public function corporate()
     {
         SEOMeta::setTitle('Kurumsal');
+        SEOMeta::setDescription('Linmak Firması resmi web sitesi');
         $corporates = Corporate::orderBy('id', 'DESC')->get();
         return view('corporate', compact('corporates'));
     }
@@ -40,6 +41,10 @@ class HomeCTRL extends Controller
     {
         $products = Product::orderBy('id', 'DESC')->paginate(6);
         $categories = Pcategory::all();
+
+        SEOMeta::setTitle('Ürünler');
+        SEOMeta::setDescription('Ürünler hakkında bilgi almak için email ve telefon adreslerinden firmamız ile iletişime geçebilirsiniz.');
+
         return view('products', compact('products', 'categories'));
     }
 
@@ -47,6 +52,9 @@ class HomeCTRL extends Controller
     {
         $category = Pcategory::whereSlug($category)->firstOrFail();
         $products = Product::with('category')->where('category_id', $category->id)->orderBy('id', 'DESC')->paginate(6);
+
+        SEOMeta::setTitle($category->title);
+        SEOMeta::setDescription($category->title." - kategorisindeki ürünler.");
 
         $categories = Pcategory::all();
         return view('products', compact('products', 'categories', 'category'));
@@ -56,15 +64,22 @@ class HomeCTRL extends Controller
     {
         $category = Pcategory::whereSlug($category)->firstOrFail();
         $product = Product::with('category')->where('category_id', $category->id)->whereSlug($slug)->firstOrFail();
-        $product_property = Information::with('category')->where('category_id', $category->id)->whereSlug($slug)->firstOrFail();
+        $product_property = Information::where('product_id', $product->id)->get();
         $categories = Pcategory::all();
 
-        return view('project_detail', compact('product', 'categories', 'product_property'));
+        SEOMeta::setTitle($product->title);
+        SEOMeta::setDescription(substr(strip_tags($product->sort_description), 0, 150));
+
+        return view('product_detail', compact('product', 'categories', 'product_property'));
     }
 
     public function services()
     {
         $services = Service::orderBy('id', 'DESC')->get();
+
+        SEOMeta::setTitle('Hizmetler');
+        SEOMeta::setDescription('Robomotiv Firmamızın müşterilerimize vermiş olduğu hizmetler.');
+
         return view('services', compact('services'));
     }
 
@@ -72,12 +87,20 @@ class HomeCTRL extends Controller
     {
         $service = Service::whereSlug($slug)->firstOrFail();
         $services = Service::limit(6)->orderBy('created_at', 'DESC')->get();
+
+        SEOMeta::setTitle($service->title);
+        SEOMeta::setDescription(substr(strip_tags($service->content), 0, 150));
+
         return view('service_detail', compact('service', 'services'));
     }
 
     public function projects()
     {
         $projects = Project::orderBy('id', 'DESC')->get();
+
+        SEOMeta::setTitle('Projeler');
+        SEOMeta::setDescription('Robomotiv firmamızın yapmış olduğu projeler');
+
         return view('projects', compact('projects'));
     }
 
@@ -86,6 +109,8 @@ class HomeCTRL extends Controller
         $project = Project::whereSlug($slug)->firstOrFail();
         $projects = Project::where('id', '!=', $project->id)->inRandomOrder()->limit(2)->get();
 
+        SEOMeta::setTitle($project->title);
+        SEOMeta::setDescription(substr(strip_tags($project->summery), 0, 150));
 
         return view('project_detail', compact('project', 'projects'));
     }
@@ -94,6 +119,10 @@ class HomeCTRL extends Controller
     {
         $blogs = Blog::orderBy('id', 'DESC')->paginate(6);
         $categories = Bcategory::all();
+
+        SEOMeta::setTitle('Bloglar');
+        SEOMeta::setDescription('Robomotiv Firmamıza ait bloglar');
+
         return view('blogs', compact('blogs', 'categories'));
     }
 
@@ -104,6 +133,9 @@ class HomeCTRL extends Controller
 
         $categories = Bcategory::all();
 
+        SEOMeta::setTitle($category->title);
+        SEOMeta::setDescription($category->title.' - kategorisindeki bloglar');
+
         return view('blogs', compact('blogs', 'categories', 'category'));
     }
 
@@ -113,11 +145,41 @@ class HomeCTRL extends Controller
         $blog = Blog::with('category')->where('category_id', $category->id)->whereSlug($slug)->firstOrFail();
         $categories = Bcategory::all();
 
+        SEOMeta::setTitle($blog->title);
+        SEOMeta::setDescription(substr(strip_tags($blog->content), 0, 150));
+
         return view('blog_detail', compact('blog', 'categories'));
     }
 
     public function contact()
     {
+        SEOMeta::setTitle('İletişim');
+        SEOMeta::setDescription('İletişim bölümünden firmamızla iletişime geçebilir teknik destek talebi oluşturabilir ve diğer konular hakkında bilgi alabilirsiniz.');
+
         return view('contact');
+    }
+
+    public function search(Request $request)
+    {
+        $request->validate([
+            'keyword' => 'required'
+        ]);
+        $keyword = $request->get('keyword');
+        $services = Service::where('title', 'LIKE', '%' . $keyword . '%')
+            ->orWhere('description', 'LIKE', '%' . $keyword . '%')
+            ->orWhere('content', 'LIKE', '%' .  $keyword . '%')
+            ->get();
+        $blogs = Blog::with('category')->where('title', 'LIKE', '%' . $keyword . '%')
+            ->orWhere('content', 'LIKE', '%' . $keyword . '%')
+            ->get();
+        $projects = Project::where('title', 'LIKE', '%' . $keyword . '%')
+            ->orWhere('summery', 'LIKE', '%' . $keyword . '%')
+            ->orWhere('mission', 'LIKE', '%' . $keyword . '%')
+            ->get();
+        $products = Product::where('title', 'LIKE', '%' . $keyword . '%')
+            ->orWhere('sort_description', 'LIKE', '%' . $keyword . '%')
+            ->orWhere('long_description', 'LIKE', '%' . $keyword .'%')
+            ->get();
+        return view('search_result', compact('services', 'projects', 'blogs', 'products'));
     }
 }

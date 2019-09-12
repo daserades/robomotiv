@@ -140,6 +140,7 @@ return [
          * Laravel Framework Service Providers...
          */
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        JordanMiguel\LaravelPopular\LaravelPopularServiceProvider::class,
 
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
