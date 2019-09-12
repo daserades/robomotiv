@@ -159,6 +159,11 @@ class HomeCTRL extends Controller
         return view('contact');
     }
 
+    public function search_get()
+    {
+        return view('search_error');
+    }
+
     public function search(Request $request)
     {
         $request->validate([

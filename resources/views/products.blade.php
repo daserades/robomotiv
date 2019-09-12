@@ -194,7 +194,7 @@
                 <div class="col-md-12">
                     <div class="title-box ttm-textcolor-white">
                         <div class="page-title-heading">
-                            <h1 class="title">Ürünler</h1>
+                            <h1 class="title">ÜRÜNLER</h1>
                         </div><!-- /.page-title-captions -->
                         <div class="breadcrumb-wrapper">
                                 <span>
@@ -233,10 +233,24 @@
                         <div class="row">
                             @foreach($products as $product)
                                 <div class="col-md-6">
-                                    <!-- featured-imagebox-post -->
-                                    <div class="featured-imagebox featured-imagebox-post">
-                                        <div class="featured-thumbnail">
-                                            <img class="img-fluid" src="{{Voyager::image($product->thumbnail('cropped'))}}" alt="">
+
+
+
+
+                                    <!-- featured-imagebox -->
+                                    <div class="featured-imagebox featured-imagebox-portfolio ttm-box-view-top-image">
+                                        <div class="ttm-box-view-content-inner">
+                                            <!-- featured-thumbnail -->
+                                            <div class="featured-thumbnail">
+                                                <img class="img-fluid" src="{{Voyager::image($product->thumbnail('cropped'))}}" alt="image">
+                                            </div><!-- featured-thumbnail end-->
+                                            <!-- ttm-box-view-overlay -->
+                                            <div class="ttm-box-view-overlay">
+                                                <div class="featured-iconbox ttm-media-link">
+                                                    <a class="ttm_prettyphoto ttm_image" title="{{$product->title}}" data-rel="prettyPhoto" href="{{Voyager::image($product->thumbnail('cropped'))}}"><i class="ti ti-search"></i></a>
+                                                    <a href="{{route('product_detail', ['category'=>$product->category->slug, 'slug'=>$product->slug])}}" class="ttm_link"><i class="ti ti-link"></i></a>
+                                                </div>
+                                            </div><!-- ttm-box-view-overlay end-->
                                         </div>
                                         <div class="featured-content featured-content-post">
                                             <div class="post-meta">
@@ -246,7 +260,7 @@
                                                 <h5><a href="{{route('product_detail', ['category'=>$product->category->slug, 'slug'=>$product->slug])}}">{{$product->title}}</a></h5>
                                             </div>
                                         </div>
-                                    </div><!-- featured-imagebox-post -->
+                                    </div><!-- featured-imagebox -->
                                 </div>
                             @endforeach
                         </div><!-- post end -->

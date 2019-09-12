@@ -10,7 +10,7 @@
                 <div class="col-md-12">
                     <div class="title-box ttm-textcolor-white">
                         <div class="page-title-heading">
-                            <h1 class="title">Ürünler</h1>
+                            <h1 class="title">ÜRÜNLER</h1>
                         </div><!-- /.page-title-captions -->
                         <div class="breadcrumb-wrapper">
                                 <span>
@@ -45,11 +45,27 @@
                         <div class="ttm-single-product-details product">
                             <div class="ttm-single-product-info clearfix">
                                 <div class="product-gallery images">
+
                                     <figure class="ttm-product-gallery__wrapper">
-                                        <div class="product-gallery__image">
-                                            <img class="img-fluid" src="{{Voyager::image($product->thumbnail('cropped'))}}" alt="product-img">
-                                        </div>
+                                        <!-- featured-imagebox -->
+                                        <div class="featured-imagebox featured-imagebox-portfolio ttm-box-view-top-image">
+                                            <div class="ttm-box-view-content-inner">
+                                                <!-- featured-thumbnail -->
+                                                <div class="featured-thumbnail">
+                                                    <img class="img-fluid" src="{{Voyager::image($product->thumbnail('cropped'))}}" alt="image">
+                                                </div><!-- featured-thumbnail end-->
+                                                <!-- ttm-box-view-overlay -->
+                                                <div class="ttm-box-view-overlay">
+                                                    <div class="featured-iconbox ttm-media-link">
+                                                        <a class="ttm_prettyphoto ttm_image" title="{{$product->title}}" data-rel="prettyPhoto" href="{{Voyager::image($product->thumbnail('cropped'))}}">
+                                                            <i class="ti ti-search"></i>
+                                                        </a>
+                                                    </div>
+                                                </div><!-- ttm-box-view-overlay end-->
+                                            </div>
+                                        </div><!-- featured-imagebox -->
                                     </figure>
+
                                 </div>
                                 <div class="summary entry-summary">
                                     <div class="product-details__short-description">

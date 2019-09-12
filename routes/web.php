@@ -31,7 +31,7 @@ Route::get('/bloglar/{category}/{slug}', ['as'=>'blog_detail', 'uses'=>'HomeCTRL
 
 Route::get('/iletisim', ['as'=>'contact', 'uses'=>'HomeCTRL@contact']);
 
-
+Route::get('/arama', ['as'=>'search_get', 'uses'=>'HomeCTRL@search_get']);
 Route::post('/arama', ['as'=>'search', 'uses'=>'HomeCTRL@search']);
 
 Route::group(['prefix' => 'admin'], function () {

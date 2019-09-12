@@ -102,9 +102,6 @@
                             </div><!-- site-branding end -->
                             <!--site-navigation -->
                             <div id="site-navigation" class="site-navigation">
-                                <div class="header-btn">
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black" href="#">TEKLİF İSTE</a>
-                                </div>
                                 <!-- header-icins -->
                                 <div class="ttm-header-icons ">
                                     <div class="ttm-header-icon ttm-header-search-link">
@@ -136,7 +133,7 @@
                                 </div>
                                 <nav id="menu" class="menu">
                                     <ul class="dropdown">
-                                        <li class="active"><a href="{{route('index')}}"><i class="fa fa-home"></i></a></li>
+                                        <li><a href="{{route('index')}}">Anasayfa</a></li>
                                         <li><a href="{{route('corporate')}}">Kurumsal</a></li>
                                         <li><a href="{{route('products')}}">Ürünler</a></li>
                                         <li><a href="{{route('services')}}">Hizmetler</a></li>

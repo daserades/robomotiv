@@ -278,7 +278,7 @@
                             <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
                             <div class="layer-content"></div>
                         </div><!-- col-img-bg-img-one end-->
-                        <img src="images/bg-image/col-bgimage-1.jpg" class="ttm-equal-height-image" alt="bg-image">
+                        <img src="{{asset('images/bg-image/col-bgimage-1.jpg')}}" class="ttm-equal-height-image" alt="bg-image">
                     </div>
                 </div><!-- row end -->
             </div>
@@ -294,7 +294,7 @@
                     <div class="col-md-5">
                         <!-- ttm_single_image-wrapper -->
                         <div class="ttm_single_image-wrapper mb_60 res-991-mb-0 res-991-mt-50">
-                            <img class="img-fluid" src="images/single-img-twel.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('images/single-img-twel.jpg')}}" alt="">
                         </div><!-- ttm_single_image-wrapper end -->
                     </div>
                     <div class="col-md-7">
@@ -306,7 +306,7 @@
                                     <div class="testimonial-content mb-35">
                                         <div class="testimonial-avatar">
                                             <div class="testimonial-img">
-                                                <img class="img-center" src="images/testimonial/01.jpg" alt="testimonial-img">
+                                                <img class="img-center" src="{{asset('images/testimonial/01.jpg')}}" alt="testimonial-img">
                                             </div>
                                         </div>
                                         <div class="testimonial-caption">
@@ -321,7 +321,7 @@
                                     <div class="testimonial-content mb-35">
                                         <div class="testimonial-avatar">
                                             <div class="testimonial-img">
-                                                <img class="img-center" src="images/testimonial/02.jpg" alt="testimonial-img">
+                                                <img class="img-center" src="{{asset('images/testimonial/02.jpg')}}" alt="testimonial-img">
                                             </div>
                                         </div>
                                         <div class="testimonial-caption">
@@ -336,7 +336,7 @@
                                     <div class="testimonial-content mb-35">
                                         <div class="testimonial-avatar">
                                             <div class="testimonial-img">
-                                                <img class="img-center" src="images/testimonial/03.jpg" alt="testimonial-img">
+                                                <img class="img-center" src="{{asset('images/testimonial/03.jpg')}}" alt="testimonial-img">
                                             </div>
                                         </div>
                                         <div class="testimonial-caption">
@@ -570,7 +570,7 @@
                             </div>
                             <div class="layer-content"></div>
                         </div><!-- col-img-bg-img-two end-->
-                        <img src="images/bg-image/col-bgimage-2.jpg" class="ttm-equal-height-image" alt="bg-image">
+                        <img src="{{asset('images/bg-image/col-bgimage-2.jpg')}}" class="ttm-equal-height-image" alt="bg-image">
                     </div>
                 </div><!-- row end -->
             </div>
@@ -610,7 +610,7 @@
                         <!-- featured-imagebox-team -->
                         <div class="featured-imagebox featured-imagebox-team ttm-team-box-view-overlay">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="images/team-member/team-img01.jpg" alt="image">
+                                <img class="img-fluid" src="{{asset('images/team-member/team-img01.jpg')}}" alt="image">
                             </div>
                             <div class="featured-content featured-content-team">
                                 <div class="featured-title">
@@ -629,7 +629,7 @@
                         <!-- featured-imagebox-team -->
                         <div class="featured-imagebox featured-imagebox-team ttm-team-box-view-overlay">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="images/team-member/team-img02.jpg" alt="image">
+                                <img class="img-fluid" src="{{asset('images/team-member/team-img02.jpg')}}" alt="image">
                             </div>
                             <div class="featured-content featured-content-team">
                                 <div class="featured-title">
@@ -648,7 +648,7 @@
                         <!-- featured-imagebox-team -->
                         <div class="featured-imagebox featured-imagebox-team ttm-team-box-view-overlay">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="images/team-member/team-img03.jpg" alt="image">
+                                <img class="img-fluid" src="{{asset('images/team-member/team-img03.jpg')}}" alt="image">
                             </div>
                             <div class="featured-content featured-content-team">
                                 <div class="featured-title">
@@ -667,7 +667,7 @@
                         <!-- featured-imagebox-team -->
                         <div class="featured-imagebox featured-imagebox-team ttm-team-box-view-overlay">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="images/team-member/team-img04.jpg" alt="image">
+                                <img class="img-fluid" src="{{asset('images/team-member/team-img04.jpg')}}" alt="image">
                             </div>
                             <div class="featured-content featured-content-team">
                                 <div class="featured-title">
