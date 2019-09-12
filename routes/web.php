@@ -31,6 +31,9 @@ Route::get('/bloglar/{category}/{slug}', ['as'=>'blog_detail', 'uses'=>'HomeCTRL
 
 Route::get('/iletisim', ['as'=>'contact', 'uses'=>'HomeCTRL@contact']);
 Route::post('/iletisim_post', ['as'=>'contact_post', 'uses'=>'HomeCTRL@contact_post']);
+Route::post('/bulten_post', ['as'=>'bulten_post', 'uses'=>'HomeCTRL@bulten_post']);
+Route::get('/bulten_post', ['as'=>'bulten_get', 'uses'=>'HomeCTRL@bulten_get']);
+
 
 Route::get('/arama', ['as'=>'search_get', 'uses'=>'HomeCTRL@search_get']);
 Route::post('/arama', ['as'=>'search', 'uses'=>'HomeCTRL@search']);

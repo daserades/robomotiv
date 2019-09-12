@@ -56,7 +56,7 @@
                                                 </div><!-- featured-thumbnail end-->
                                                 <!-- ttm-box-view-overlay -->
                                                 <div class="ttm-box-view-overlay">
-                                                    <div class="featured-iconbox ttm-media-link">
+                                                    <div id="searchSlip" class="featured-iconbox ttm-media-link">
                                                         <a class="ttm_prettyphoto ttm_image" title="{{$product->title}}" data-rel="prettyPhoto" href="{{Voyager::image($product->thumbnail('cropped'))}}">
                                                             <i class="ti ti-search"></i>
                                                         </a>

@@ -234,33 +234,25 @@
                             @foreach($products as $product)
                                 <div class="col-md-6">
 
-
-
-
-                                    <!-- featured-imagebox -->
-                                    <div class="featured-imagebox featured-imagebox-portfolio ttm-box-view-top-image">
-                                        <div class="ttm-box-view-content-inner">
-                                            <!-- featured-thumbnail -->
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid" src="{{Voyager::image($product->thumbnail('cropped'))}}" alt="image">
-                                            </div><!-- featured-thumbnail end-->
-                                            <!-- ttm-box-view-overlay -->
-                                            <div class="ttm-box-view-overlay">
-                                                <div class="featured-iconbox ttm-media-link">
-                                                    <a class="ttm_prettyphoto ttm_image" title="{{$product->title}}" data-rel="prettyPhoto" href="{{Voyager::image($product->thumbnail('cropped'))}}"><i class="ti ti-search"></i></a>
-                                                    <a href="{{route('product_detail', ['category'=>$product->category->slug, 'slug'=>$product->slug])}}" class="ttm_link"><i class="ti ti-link"></i></a>
-                                                </div>
-                                            </div><!-- ttm-box-view-overlay end-->
+                                    <!-- featured-imagebox-post -->
+                                    <div class="featured-imagebox featured-imagebox-post">
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="{{Voyager::image($product->thumbnail('cropped'))}}" alt="">
                                         </div>
                                         <div class="featured-content featured-content-post">
                                             <div class="post-meta">
-                                                <span class="ttm-meta-line"><i class="fa fa-calendar"></i>{{$product->created_at->format('d-m-Y')}}</span>
+                                                <span class="ttm-meta-line"><i class="fa fa-calendar"></i>
+                                                    {{$product->created_at->format('d-m-Y')}}
+                                                </span>
                                             </div>
                                             <div class="post-title featured-title">
-                                                <h5><a href="{{route('product_detail', ['category'=>$product->category->slug, 'slug'=>$product->slug])}}">{{$product->title}}</a></h5>
+                                                <h5><a href="{{route('product_detail', ['category'=>$product->category->slug, 'slug'=>$product->slug])}}">
+                                                        {{$product->title}}
+                                                    </a></h5>
                                             </div>
                                         </div>
-                                    </div><!-- featured-imagebox -->
+                                    </div><!-- featured-imagebox-post end -->
+
                                 </div>
                             @endforeach
                         </div><!-- post end -->

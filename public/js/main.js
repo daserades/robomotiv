@@ -32,7 +32,7 @@
 
 13. One Page setting
 
-14. Back to top 
+14. Back to top
 
  =============== */
 
@@ -59,23 +59,23 @@
 /* TopSearch
 /*------------------------------------------------------------------------------*/
 
-    
-    jQuery( ".ttm-header-search-link a" ).addClass('sclose');   
-    
-    jQuery( ".ttm-header-search-link a" ).click(function(event ) {  
-  
-        jQuery(".field.searchform-s").focus();  
-        
-        if (jQuery('.ttm-header-search-link a').hasClass('sclose')) {   
+
+    jQuery( ".ttm-header-search-link a" ).addClass('sclose');
+
+    jQuery( ".ttm-header-search-link a" ).click(function(event ) {
+
+        jQuery(".field.searchform-s").focus();
+
+        if (jQuery('.ttm-header-search-link a').hasClass('sclose')) {
             jQuery( ".ttm-header-search-link a i" ).removeClass('ti-search').addClass('ti-close');
-            jQuery(this).removeClass('sclose').addClass('open');    
-            jQuery(".ttm-search-overlay").addClass('st-show');                  
+            jQuery(this).removeClass('sclose').addClass('open');
+            jQuery(".ttm-search-overlay").addClass('st-show');
         } else {
             jQuery(this).removeClass('open').addClass('sclose');
-            jQuery( ".ttm-header-search-link a i" ).removeClass('ti-close').addClass('ti-search');  
-            jQuery(".ttm-search-overlay").removeClass('st-show');   
-        }   
-        event.preventDefault(); 
+            jQuery( ".ttm-header-search-link a i" ).removeClass('ti-close').addClass('ti-search');
+            jQuery(".ttm-search-overlay").removeClass('st-show');
+        }
+        event.preventDefault();
     });
 
 
@@ -85,7 +85,7 @@
 
 
 $(window).scroll(function(){
-    if ( matchMedia( 'only screen and (min-width: 1200px)' ).matches ) 
+    if ( matchMedia( 'only screen and (min-width: 1200px)' ).matches )
     {
         if ($(window).scrollTop() >= 50 ) {
             $('.ttm-stickable-header').addClass('fixed-header');
@@ -110,7 +110,7 @@ $(window).scroll(function(){
     $('ul.dropdown li').hover(function () {
         $(this).addClass('hover');
 
-    }, 
+    },
     function () {
         $(this).removeClass('hover');
     });
@@ -134,12 +134,12 @@ $(window).scroll(function(){
 /*------------------------------------------------------------------------------*/
 /* Animation on scroll: Number rotator
 /*------------------------------------------------------------------------------*/
-    
+
     $("[data-appear-animation]").each(function() {
         var self      = $(this);
         var animation = self.data("appear-animation");
         var delay     = (self.data("appear-animation-delay") ? self.data("appear-animation-delay") : 0);
-        
+
         if( $(window).width() > 959 ) {
             self.html('0');
             self.waypoint(function(direction) {
@@ -180,12 +180,12 @@ jQuery('.progress').each(function(){
 
 /*------------------------------------------------------------------------------*/
 /* Tab
-/*------------------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------------------*/
 
 $('.ttm-tabs').each(function() {
     $(this).children('.content-tab').children().hide();
     $(this).children('.content-tab').children().first().show();
-    $(this).find('.tabs').children('li').on('click', function(e) {  
+    $(this).find('.tabs').children('li').on('click', function(e) {
         var liActive = $(this).index(),
             contentActive = $(this).siblings().removeClass('active').parents('.ttm-tabs').children('.content-tab').children().eq(liActive);
         contentActive.addClass('active').fadeIn('slow');
@@ -257,7 +257,7 @@ $(window).load(function(){
         });
    });
 
-    
+
 /*------------------------------------------------------------------------------*/
 /* Prettyphoto
 /*------------------------------------------------------------------------------*/
@@ -271,29 +271,31 @@ jQuery('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').ea
             jQuery(this).attr('data-rel','prettyPhoto');
         }
     }
-});     
+});
 
 
 jQuery('a[data-gal^="prettyPhoto"]').prettyPhoto();
-jQuery('a.ttm_prettyphoto').prettyPhoto();
+jQuery('a.ttm_prettyphoto').prettyPhoto({
+    social_tools: false
+});
 jQuery('a[data-gal^="prettyPhoto"]').prettyPhoto();
 jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({hook: 'data-gal'})
 
 });
-    
+
 
 /*------------------------------------------------------------------------------*/
 /* owlCarousel
 /*------------------------------------------------------------------------------*/
 
-// ===== Testimonial slide ==== 
+// ===== Testimonial slide ====
 
-    $(".testimonial-slide").owlCarousel({  
+    $(".testimonial-slide").owlCarousel({
         loop:true,
         margin:0,
         smartSpeed: 3000,
         nav: $('.testimonial-slide').data('nav'),
-        dots: $('.testimonial-slide').data('dots'), 
+        dots: $('.testimonial-slide').data('dots'),
         autoplay: $('.testimonial-slide').data('auto'),
         responsive:{
             0:{
@@ -309,14 +311,14 @@ jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({hook: 'data-gal'})
     });
 
 
-// ===== Blog slide ==== 
+// ===== Blog slide ====
 
-    $(".blog-slide").owlCarousel({  
+    $(".blog-slide").owlCarousel({
         autoplay: false,
         loop:true,
         margin:0,
          nav: $('.blog-slide').data('nav'),
-        dots: $('.blog-slide').data('dots'),                     
+        dots: $('.blog-slide').data('dots'),
         autoplay: $('.blog-slide').data('auto'),
         smartSpeed: 3000,
         responsive:{
@@ -333,14 +335,14 @@ jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({hook: 'data-gal'})
     });
 
 
-// ===== Post slide ==== 
+// ===== Post slide ====
 
-    $(".post-slide").owlCarousel({  
+    $(".post-slide").owlCarousel({
         autoplay: false,
         loop:true,
         margin:0,
         nav: $('.post-slide').data('nav'),
-        dots: $('.post-slide').data('dots'),                     
+        dots: $('.post-slide').data('dots'),
         autoplay: $('.post-slide').data('auto'),
         smartSpeed: 3000,
         responsive:{
@@ -357,13 +359,13 @@ jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({hook: 'data-gal'})
     });
 
 
-// ===== Team slide ==== 
+// ===== Team slide ====
 
-    $(".team-slide").owlCarousel({  
+    $(".team-slide").owlCarousel({
         loop:true,
         margin:0,
         nav: $('.team-slide').data('nav'),
-        dots: $('.team-slide').data('dots'),                     
+        dots: $('.team-slide').data('dots'),
         autoplay: $('.team-slide').data('auto'),
         smartSpeed: 3000,
         responsive:{
@@ -383,14 +385,14 @@ jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({hook: 'data-gal'})
     });
 
 
-// ===== Clients-logo ==== 
+// ===== Clients-logo ====
 
-$(".clients-slide").owlCarousel({ 
+$(".clients-slide").owlCarousel({
     autoplay: true,
     margin: 0,
     loop:true,
     nav: $('.clients-slide').data('nav'),
-    dots: $('.clients-slide').data('dots'),                     
+    dots: $('.clients-slide').data('dots'),
     autoplay: $('.clients-slide').data('auto'),
     smartSpeed: 3000,
     responsive:{
@@ -406,17 +408,17 @@ $(".clients-slide").owlCarousel({
         992:{
             items: $('.clients-slide').data('item')
         }
-    }    
+    }
 });
 
 
-// ===== Portfolio-slide ==== 
-$(".portfolio-slide").owlCarousel({ 
+// ===== Portfolio-slide ====
+$(".portfolio-slide").owlCarousel({
     autoplay: false,
     margin: 0,
     loop:true,
     nav: $('.portfolio-slide').data('nav'),
-    dots: $('.portfolio-slide').data('dots'),                     
+    dots: $('.portfolio-slide').data('dots'),
     autoplay: $('.portfolio-slide').data('auto'),
     smartSpeed: 3000,
     responsive:{
@@ -432,16 +434,16 @@ $(".portfolio-slide").owlCarousel({
         1000:{
            items: $('.portfolio-slide').data('item')
         }
-    }    
+    }
 });
 
 
-$(".portfolio-img-slide").owlCarousel({ 
+$(".portfolio-img-slide").owlCarousel({
     autoplay: false,
     margin: 0,
     loop:true,
     nav: $('.portfolio-img-slide').data('nav'),
-    dots: $('.portfolio-img-slide').data('dots'),                     
+    dots: $('.portfolio-img-slide').data('dots'),
     autoplay: $('.portfolio-img-slide').data('auto'),
     smartSpeed: 3000,
     responsive:{
@@ -457,16 +459,16 @@ $(".portfolio-img-slide").owlCarousel({
         1000:{
            items: $('.portfolio-img-slide').data('item')
         }
-    }    
+    }
 });
 
-// ===== Event slide ==== 
+// ===== Event slide ====
 
-    $(".event-slide").owlCarousel({  
+    $(".event-slide").owlCarousel({
         loop:true,
         margin:0,
         nav: $('.event-slide').data('nav'),
-        dots: $('.event-slide').data('dots'),                     
+        dots: $('.event-slide').data('dots'),
         autoplay: $('.event-slide').data('auto'),
         smartSpeed: 3000,
         responsive:{
@@ -488,15 +490,15 @@ $(".portfolio-img-slide").owlCarousel({
 
 /*------------------------------------------------------------------------------*/
 /* One Page setting
-/*------------------------------------------------------------------------------*/  
+/*------------------------------------------------------------------------------*/
 jQuery(document).ready(function($) {
   // Scroll to the desired section on click
   // Make sure to add the `data-scroll` attribute to your `<a>` tag.
-  // Example: 
+  // Example:
   // `<a data-scroll href="#my-section">My Section</a>` will scroll to an element with the id of 'my-section'.
   function scrollToSection(event) {
     event.preventDefault();
-    var $section = $($(this).attr('href')); 
+    var $section = $($(this).attr('href'));
     $('html, body').animate({
       scrollTop: $section.offset().top
     }, 500);
@@ -510,7 +512,7 @@ jQuery(document).ready(function($) {
 /* Back to top
 /*------------------------------------------------------------------------------*/
 
-// ===== Scroll to Top ==== 
+// ===== Scroll to Top ====
 jQuery('#totop').hide();
 jQuery(window).scroll(function() {
     "use strict";

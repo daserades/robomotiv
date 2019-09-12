@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Service;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use App\Blog;
 use App\Product;
@@ -26,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         setLocale(LC_TIME, 'tr-TR');
+
+        View::share('services_footer', Service::limit(9)->orderBy('id', 'DESC')->get());
 
         view()->composer(['blogs', 'blogs_category', 'blog_detail'], function ($view){
             $view->with('popular_posts', Blog::popularLast(3)->limit(6)->get());

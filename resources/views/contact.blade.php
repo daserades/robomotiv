@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="GSM" type="text" value="" placeholder="GSM" required="required"></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="gsm" type="text" value="" placeholder="GSM" required="required"></span>
                                     </label>
                                 </div>
                             </div>
@@ -54,6 +54,16 @@
                             </label>
                             <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black" value="Formu Gönder">
                         </form>
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                     </div>
                     <div class="col-md-5">
                         <div class="ttm-rounded-shadow-box pt-40 pr-50 pb-55 pl-50 box-shadow2 res-767-mt-40 clearfix">

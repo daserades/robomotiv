@@ -9,67 +9,66 @@
             <ul>
                 @php $i = 0; @endphp
                 @foreach($sliders as $slider)
-                <li data-index="rs-@if($i==0){{$i}}@endif" data-transition="slotslide-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
-                    <img src="{{Voyager::image($slider->thumbnail('cropped'))}}" alt="" title="slider-mainbg-001" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <li data-transition="slotslide-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
-                    <div class="tp-caption tp-resizeme" id="slide-3-layer-2" data-x="['left','left','center','center']" data-hoffset="['49','39','0','0']" data-y="['top','top','middle','middle']"  data-voffset="['230','179','-136','-86']"
+                        <img src="{{Voyager::image($slider->thumbnail('cropped'))}}" alt="" title="slider-mainbg-001" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 
-                         data-fontsize="['75','75','60','40']"
-                         data-lineheight="['100','100','80','50']"
-                         data-fontweight="['600','600','600','600']"
-                         data-color="['rgb(242, 244, 248)','rgb(242, 244, 248)','rgb(242, 244, 248)','rgb(242, 244, 248)']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-                         data-type="text"
-                         data-responsive_offset="on"
-                         data-frames='[{"delay":350,"speed":800,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]" >{{ $slider->title }}</div>
+                        <div class="tp-caption tp-resizeme" data-x="['left','left','center','center']" data-hoffset="['50','40','0','0']" data-y="['top','top','top','top']" data-voffset="['271','281','170','156']"
 
+                             data-fontsize="['75','75','60','40']"
+                             data-lineheight="['100','100','80','50']"
+                             data-fontweight="['600','600','600','600']"
+                             data-color="['rgb(242, 244, 248)','rgb(242, 244, 248)','rgb(242, 244, 248)','rgb(242, 244, 248)']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+                             data-type="text"
+                             data-responsive_offset="on"
+                             data-frames='[{"delay":840,"speed":800,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]">{{$slider->title}}</div>
 
-                    <div class="tp-caption tp-resizeme" id="slide-3-layer-1" data-x="['left','left','center','center']" data-hoffset="['50','40','0','0']" data-y="['top','top','middle','middle']" data-voffset="['339','199','-83','-44']"
+                        <div class="tp-caption tp-resizeme" data-x="['left','left','center','center']" data-hoffset="['50','40','-142','-473']" data-y="['top','top','middle','middle']" data-voffset="['379','389','44','76']"
 
-                         data-fontsize="['18','18','15','12']"
-                         data-lineheight="['20','20','20','15']"
-                         data-fontweight="['200','200','200','200']"
-                         data-color="['rgb(242, 244, 248)','rgb(242, 244, 248)','rgb(242, 244, 248)','rgb(242, 244, 248)']"
-                         data-letterspacing="['3','3','3','3']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-                         data-type="text"
-                         data-responsive_offset="on"
-                         data-frames='[{"delay":130,"speed":400,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]" >  {!! substr(strip_tags($slider->description), 0, 80) !!}...  </div>
+                             data-fontsize="['22','22','19','19']"
+                             data-lineheight="['30','30','25','25']"
+                             data-color="['rgb(242, 244, 248)','rgb(242, 244, 248)','rgb(242, 244, 248)','rgb(242, 244, 248)']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+                             data-visibility="['on','on','on','off']"
+                             data-type="text"
+                             data-responsive_offset="on"
+                             data-frames='[{"delay":1500,"speed":400,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]"
+                             data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"> {!! substr(strip_tags($slider->description), 0, 100) !!} . . . </div>
 
-                @if($slider->link != null)
-                    <a class="tp-caption skin-flat-button tp-resizeme" href="{{$slider->link}}" target="_self" id="slide-3-layer-9" data-x="['left','left','center','center']" data-hoffset="['50','40','0','0']" data-y="['top','top','middle','middle']" data-voffset="['452','462','121','69']"
-                       data-fontsize="['13','13','12','11']"
-                       data-lineheight="['13','13','12','11']"
-                       data-width="none"
-                       data-height="none"
-                       data-whitespace="nowrap"
-                       data-type="text"
-                       data-actions=''
-                       data-responsive_offset="on"
-                       data-frames='[{"delay":1970,"speed":500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                       data-textAlign="['inherit','inherit','inherit','inherit']"
-                       data-paddingtop="[20,20,15,12]"
-                       data-paddingright="[30,30,25,20]"
-                       data-paddingbottom="[20,20,15,12]"
-                       data-paddingleft="[30,30,25,20]">Daha Fazla Detay . . .</a>
-                @endif
-                </li>
-                    @php $i++; @endphp
+                        @if($slider->link != null)
+                        <a class="tp-caption skin-flat-button tp-resizeme" href="{{$slider->link}}" target="_self" data-x="['left','left','center','center']" data-hoffset="['50','40','0','0']" data-y="['top','top','middle','middle']" data-voffset="['452','462','121','69']"
+                           data-fontsize="['13','13','12','11']"
+                           data-lineheight="['13','13','12','11']"
+                           data-width="none"
+                           data-height="none"
+                           data-whitespace="nowrap"
+                           data-type="text"
+                           data-actions=''
+                           data-responsive_offset="on"
+                           data-frames='[{"delay":1970,"speed":500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                           data-textAlign="['inherit','inherit','inherit','inherit']"
+                           data-paddingtop="[20,20,15,12]"
+                           data-paddingright="[30,30,25,20]"
+                           data-paddingbottom="[20,20,15,12]"
+                           data-paddingleft="[30,30,25,20]">Daha Fazla Detay . . .</a>
+                        @endif
+                    </li>
+                @php $i++; @endphp
                 @endforeach
             </ul>
         </div>

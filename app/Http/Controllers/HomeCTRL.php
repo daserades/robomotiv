@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Bcategory;
 use App\Blog;
+use App\Bulten;
 use App\Corporate;
 use App\Information;
+use App\Mail\Iletisim;
 use App\Pcategory;
 use App\Product;
 use App\Project;
@@ -13,6 +15,7 @@ use App\Service;
 use App\Slider;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use TCG\Voyager\Models\Category;
 use function foo\func;
 
@@ -20,7 +23,7 @@ class HomeCTRL extends Controller
 {
     public function index()
     {
-        $sliders = Slider::all();
+        $sliders = Slider::orderBy('id', 'DESC')->get();
         $projects = Project::limit(6)->orderBy('id', 'DESC')->get();
         $blogs = Blog::limit(4)->orderBy('id', 'DESC')->get();
         $products = Product::limit(4)->orderBy('id', 'DESC')->get();
@@ -68,6 +71,7 @@ class HomeCTRL extends Controller
         $product = Product::with('category')->where('category_id', $category->id)->whereSlug($slug)->firstOrFail();
         $product_property = Information::where('product_id', $product->id)->get();
         $categories = Pcategory::all();
+        $product->visit();
 
         SEOMeta::setTitle($product->title);
         SEOMeta::setDescription(substr(strip_tags($product->sort_description), 0, 150));
@@ -146,6 +150,7 @@ class HomeCTRL extends Controller
         $category = Bcategory::whereSlug($category)->firstOrFail();
         $blog = Blog::with('category')->where('category_id', $category->id)->whereSlug($slug)->firstOrFail();
         $categories = Bcategory::all();
+        $blog->visit();
 
         SEOMeta::setTitle($blog->title);
         SEOMeta::setDescription(substr(strip_tags($blog->content), 0, 150));
@@ -164,20 +169,41 @@ class HomeCTRL extends Controller
     public function contact_post(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'mail' => 'required',
-            'gsm' => 'required',
-            'city' => 'required',
-            'message' => 'required',
-        ]);
+        'name' => 'required',
+        'mail' => 'required|unique:users',
+        'gsm' => 'required',
+        'city' => 'required',
+        'message' => 'required',
+    ]);
         //burası iletisim
         // burası master
-        Mail::to(setting('iletisim.mail'))->send(new Iletisim($request));
+        Mail::to(setting('iletisim.email'))->send(new Iletisim($request));
 
 
         return view('success')
             ->with('title', 'Mail Gönderildi')
             ->with('message', 'Girmiş olduğunuz bilgiler başarılı bir şekilde firmamıza ulaşmıştır. Gerek görüldüğü takdirde size geridönüş yapılacaktır. ');
+    }
+
+    public function bulten_post(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|unique:bultens'
+        ]);
+
+        Bulten::create([
+            'email' => $request->email,
+            'ip_address' => $request->ip()
+        ]);
+
+        return view('success')
+            ->with('title', 'Kayıt İşlemi Başarılı')
+            ->with('message', 'E-Posta adresiniz bültenimize kaydedildi.');
+    }
+
+    public function bulten_get()
+    {
+        return view('search_error');
     }
 
     public function search_get()

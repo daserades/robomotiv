@@ -1122,6 +1122,14 @@ body{ counter-reset: section; }
     right: 50%;
     margin-top: -17px;
 }
+
+/* Ürün detay sayfasında search iconunu resme ortalandı */
+#searchSlip a{
+    top: 50%;
+    right: 43%;
+    margin-top: -17px;
+}
+
 .featured-imagebox-portfolio a.ttm_link {
     line-height: 41px;
     margin-right: -47px;

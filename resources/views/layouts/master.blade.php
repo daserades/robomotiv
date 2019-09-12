@@ -176,7 +176,8 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 widget-area">
-                                    <form id="subscribe-form" class="newsletter-form" method="post" action="#" data-mailchimp="true">
+                                    <form id="subscribe-form" class="newsletter-form" method="post" action="{{route('bulten_post')}}" data-mailchimp="true">
+                                        @csrf
                                         <div class="mailchimp-inputbox clearfix" id="subscribe-content">
                                             <p><input type="email" name="email" placeholder="E-Posta" required=""></p>
                                             <p><input type="submit" value="Abone Ol"></p>
@@ -227,17 +228,11 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget flicker_widget clearfix">
-                            <h3 class="widget-title">Flickr</h3>
+                            <h3 class="widget-title">Hizmetlerimiz</h3>
                             <div class="ttm-flicker-widget-wrapper">
-                                <a href="#"><img src="images/flicker/01.jpg" alt="A photo on Flickr" title="themetech-one"></a>
-                                <a href="#"><img src="images/flicker/02.jpg" alt="A photo on Flickr" title="themetech-two"></a>
-                                <a href="#"><img src="images/flicker/03.jpg" alt="A photo on Flickr" title="themetech-three"></a>
-                                <a href="#"><img src="images/flicker/04.jpg" alt="A photo on Flickr" title="themetech-four"></a>
-                                <a href="#"><img src="images/flicker/05.jpg" alt="A photo on Flickr" title="themetech-five"></a>
-                                <a href="#"><img src="images/flicker/06.jpg" alt="A photo on Flickr" title="themetech-six"></a>
-                                <a href="#"><img src="images/flicker/07.jpg" alt="A photo on Flickr" title="themetech-seven"></a>
-                                <a href="#"><img src="images/flicker/08.jpg" alt="A photo on Flickr" title="themeteh-eight"></a>
-                                <a href="#"><img src="images/flicker/09.jpg" alt="A photo on Flickr" title="themetech-nine"></a>
+                                @foreach($services_footer as $service)
+                                <a href="{{route('service_detail', ['slug'=>$service->slug])}}"><img src="{{Voyager::image($service->thumbnail('cropped'))}}" alt="A photo on Flickr" title="themetech-one"></a>
+                                @endforeach
                             </div>
                         </div>
                     </div>
