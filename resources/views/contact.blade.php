@@ -7,7 +7,7 @@
         <div class="ttm-row map-section ttm-bgcolor-white">
             <div class="map-wrapper">
                 <div id="map_canvas">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196279.019517971!2d30.404730377605865!3d39.76525880143579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cc3e08220c0e5f%3A0xbc89395938049a08!2sEski%C5%9Fehir!5e0!3m2!1str!2str!4v1568120192485!5m2!1str!2str" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98139.23166791956!2d30.474774868595187!3d39.76545390604613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cc3e08220c0e5f%3A0xbc89395938049a08!2sEski%C5%9Fehir!5e0!3m2!1str!2str!4v1568358662222!5m2!1str!2str" width="600" height="330" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -19,7 +19,6 @@
                         <!-- section title -->
                         <div class="section-title with-desc clearfix">
                             <div class="title-header">
-                                <br>
                                 <h2 class="title">İletişim Formu</h2>
                             </div>
                         </div><!-- section title end -->

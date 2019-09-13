@@ -170,7 +170,7 @@ class HomeCTRL extends Controller
     {
         $request->validate([
         'name' => 'required',
-        'mail' => 'required|unique:users',
+        'mail' => 'required',
         'gsm' => 'required',
         'city' => 'required',
         'message' => 'required',
