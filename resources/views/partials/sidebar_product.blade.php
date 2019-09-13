@@ -17,7 +17,7 @@
     </ul>
 </aside>
 <aside class="widget widget-recent-post">
-    <h3 class="widget-title">Popüler Ürünler</h3>
+    <h3 class="widget-title">Popüler Bloglar</h3>
     <ul class="ttm-recent-post-list">
         @foreach($popular_products as $product)
         <li class="ttm-recent-post-list-li clearfix">
