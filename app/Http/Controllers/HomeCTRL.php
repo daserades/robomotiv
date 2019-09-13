@@ -28,7 +28,7 @@ class HomeCTRL extends Controller
         $blogs = Blog::limit(4)->orderBy('id', 'DESC')->get();
         $products = Product::limit(4)->orderBy('id', 'DESC')->get();
         $services = Service::limit(3)->orderBy('id', 'DESC')->get();
-        SEOMeta::setTitle('Anasayfa');
+
         SEOMeta::setDescription('Linmak Firması resmi web sitesi');
 
         return view('index', compact('sliders', 'projects', 'blogs', 'products', 'services'));

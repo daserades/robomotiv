@@ -63,8 +63,7 @@ tpj=jQuery;
             type:"mouse",
             origo:"slidercenter",
             speed:2000,
-            levels:[2,3,4,5,6,7,12,16,10,50,46,47,48,49,50,55],
-            type:"mouse",
+            levels:[1,2,3,4,5,6,7,12,16,10,50,46,47,48,49,50,55],
         },
         shadow:0,
         spinner:"off",
@@ -86,7 +85,7 @@ tpj=jQuery;
       });
     }
   });
- 
+
 
 /* overlay header */
  tpj(document).ready(function() {
@@ -170,4 +169,4 @@ tpj=jQuery;
       });
     }
   });
- 
+

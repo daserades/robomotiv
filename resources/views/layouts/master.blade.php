@@ -220,8 +220,8 @@
                         <div class="widget widget_text clearfix">
                             <h3 class="widget-title">Sorularınız İçin</h3>
                             <div class="textwidget widget-text">
-                                <h4 class="ttm-textcolor-skincolor"><a style="color: #fda12b;" href="tel:{{setting('iletisim.phone')}}">{{setting('iletisim.phone')}}</a></h4>
-                                <h6 class="ttm-textcolor-skincolor"><a style="color: #fda12b;" href="mailto:{{setting('iletisim.email')}}">{{setting('iletisim.email')}}</a></h6>
+                                <h4 class="ttm-textcolor-skincolor"><a style="color: #ffffff;" href="tel:{{setting('iletisim.phone')}}">{{setting('iletisim.phone')}}</a></h4>
+                                <h6 class="ttm-textcolor-skincolor"><a style="color: #ffffff;" href="mailto:{{setting('iletisim.email')}}">{{setting('iletisim.email')}}</a></h6>
                                 <p>Ürünler hakkında bilgi almak için email ve telefon adreslerinden firmamız ile iletişime geçebilirsiniz.</p>
                             </div>
                         </div>

@@ -20,6 +20,6 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.browserSync({
     notify: false,
-    proxy: 'robomotiv.local'
+    proxy: 'gvv.local'
 });
 mix.disableNotifications();

@@ -9,7 +9,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "Robomotiv", // set false to total remove
+            'title'        => "Gvv-Gerustbau", // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => 'Robomotiv Firması resmi web sitesi', // set false to total remove
             'separator'    => ' - ',
