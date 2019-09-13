@@ -78,7 +78,7 @@
     <!--site-main start-->
     <div class="site-main">
 
-        <!--Header-->
+        {{--<!--Header-->
         <section class="ttm-row row-top-section clearfix">
             <div class="container">
                 <div class="row row-equal-height">
@@ -137,7 +137,7 @@
                 </div><!-- row end -->
             </div>
         </section>
-        <!-- Header end -->
+        <!-- Header end -->--}}
 
         <!--Corporate-->
         <section class="ttm-row about-section ttm-bgcolor-white bg-img1 break-991-colum clearfix">
@@ -185,7 +185,7 @@
                                         </div>
                                         <div class="featured-content">
                                             <div class="featured-title">
-                                                <h5>7/24<br>Hizmet</h5>
+                                                <h5>7 / 24<br>Hizmet</h5>
                                             </div>
                                         </div>
                                     </div><!-- featured-icon-box end-->
@@ -260,7 +260,7 @@
         <div class="ttm-row"></div>
 
 
-        <!--broken-section-->
+        <!-- Service -->
         <div class="ttm-row broken-section break-991-colum ttm-bgcolor-darkgrey clearfix">
             <div class="container">
                 <!-- row -->
@@ -369,7 +369,7 @@
                 </div><!-- row end -->
             </div>
         </div>
-        <!--broken-section end-->
+        <!-- Service end -->
 
 
 
@@ -387,8 +387,8 @@
                                     <h2 class="title">Çalışmalarımız</h2>
                                 </div>
                             </div><!-- section-title end -->
-                            <ul class="tabs text-right width-64 mt-35 res-1199-mt-0 res-1199-mb-20">
-                                <li class="tab active"><a href="{{route('projects')}}"> Tüm Çalışmalarımız </a></li>
+                            <ul class="text-right width-64 mt-35 res-1199-mt-0 res-1199-mb-20">
+                                <li class="tab active"><a href="{{route('projects')}}"> TÜM ÇALIŞMALARIMIZ </a></li>
                             </ul><!-- flat-tab end -->
                             <div class="content-tab width-100">
                                 <!-- content-inner -->
