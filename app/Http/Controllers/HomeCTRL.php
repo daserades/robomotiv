@@ -113,7 +113,7 @@ class HomeCTRL extends Controller
     public function project_detail($slug)
     {
         $project = Project::whereSlug($slug)->firstOrFail();
-        $projects = Project::where('id', '!=', $project->id)->inRandomOrder()->limit(2)->get();
+        $projects = Project::where('id', '!=', $project->id)->inRandomOrder()->limit(3)->get();
 
         SEOMeta::setTitle($project->title);
         SEOMeta::setDescription(substr(strip_tags($project->summery), 0, 150));

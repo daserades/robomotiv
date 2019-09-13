@@ -133,13 +133,13 @@
                                 </div>
                                 <nav id="menu" class="menu">
                                     <ul class="dropdown">
-                                        <li><a href="{{route('index')}}">Anasayfa</a></li>
-                                        <li><a href="{{route('corporate')}}">Kurumsal</a></li>
-                                        <li><a href="{{route('products')}}">Ürünler</a></li>
-                                        <li><a href="{{route('services')}}">Hizmetler</a></li>
-                                        <li><a href="{{route('projects')}}">Çalışmalar</a></li>
-                                        <li><a href="{{route('blogs')}}">Blog</a></li>
-                                        <li><a href="{{route('contact')}}">İletişim</a></li>
+                                        <li class="{{active(['index'], 'active')}}"><a href="{{route('index')}}"><i class="fa fa-home fa-2x"></i></a></li>
+                                        <li class="{{active(['corporate'], 'active')}}"><a href="{{route('corporate')}}">Kurumsal</a></li>
+                                        <li class="{{active(['products', 'products_category', 'product_detail'], 'active')}}"><a href="{{route('products')}}">Ürünler</a></li>
+                                        <li class="{{active(['services', 'service_detail'], 'active')}}"><a href="{{route('services')}}">Hizmetler</a></li>
+                                        <li class="{{active(['projects', 'project_detail'], 'active')}}"><a href="{{route('projects')}}">Çalışmalar</a></li>
+                                        <li class="{{active(['blogs', 'blogs_category', 'blog_detail'], 'active')}}"><a href="{{route('blogs')}}">Blog</a></li>
+                                        <li class="{{active(['contact'], 'active')}}"><a href="{{route('contact')}}">İletişim</a></li>
                                     </ul>
                                 </nav>
                             </div><!-- site-navigation end-->
@@ -201,7 +201,6 @@
                             </div>
                             <p>{{setting('footer-alani.description')}}</p>
                         </div>
-                        <a href="https://partum.com.tr" target="_blank"><img src="{{asset('images/partum.svg')}}" class="text-right" width="90px;" alt=""></a>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget widget_nav_menu clearfix">
@@ -232,7 +231,9 @@
                             <h3 class="widget-title">Hizmetlerimiz</h3>
                             <div class="ttm-flicker-widget-wrapper">
                                 @foreach($services_footer as $service)
-                                <a href="{{route('service_detail', ['slug'=>$service->slug])}}"><img src="{{Voyager::image($service->thumbnail('cropped'))}}" alt="A photo on Flickr" title="themetech-one"></a>
+                                    <a href="{{route('service_detail', ['slug'=>$service->slug])}}">
+                                        <img src="{{Voyager::image($service->thumbnail('cropped'))}}" alt="A photo on Flickr" title="themetech-one" width="100px;" />
+                                    </a>
                                 @endforeach
                             </div>
                         </div>
@@ -249,6 +250,7 @@
                     <div class="col-md-4 ttm-footer2-right">
                         <div class="social-icons">
                             <ul class="list-inline">
+                                <a href="https://partum.com.tr" target="_blank"><img src="{{asset('images/partum.svg')}}" class="text-right" width="90px;" alt=""></a>
                                 <li><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="{{setting('iletisim.twitter')}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="{{setting('iletisim.youtube')}}"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>

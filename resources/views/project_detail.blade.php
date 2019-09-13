@@ -105,14 +105,6 @@
                         <h4>Proje Misyonu</h4>
                         <p>{!! $project->mission !!}</p>
                         <div class="pt-15 clearfix">
-                            <div class="social-icons circle social-hover text-right">
-                                <ul class="list-inline mb-0">
-                                    <li class="social-facebook"><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li class="social-twitter"><a href="{{setting('iletisim.twitter')}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li class="social-gplus"><a href="{{setting('iletisim.youtube')}}"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                    <li class="social-linkedin"><a href="{{setting('iletisim.linkedin')}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
                             {{--<div class="ttm-nextprev-bottom-nav">
                                 <nav class="navigation post-navigation">
                                     <div class="nav-links">
