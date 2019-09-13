@@ -2512,3 +2512,16 @@ section.error-404 .page-content p { font-size: 18px; margin-bottom: 30px; }
   margin-bottom: 08px;
 }
 .map-wrapper.style2{ height: 100%; margin: 0; padding: 0;}
+
+
+@media screen and (max-width: 420px) {
+
+    .gvv_bg  {
+        display: none!important;
+    }
+}
+
+.gvv_color {
+    background-color: rgba(227, 18, 18, 0.7) !important;
+    padding: 4px!important;
+}
