@@ -59,6 +59,11 @@
                         </div><!-- featured-imagebox -->
                     </div>
                     @endforeach
+                    <div class="col-md-12">
+                        <div class="ttm-pagination">
+                            {{$projects->links('partials.paginate')}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

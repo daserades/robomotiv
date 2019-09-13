@@ -44,7 +44,7 @@ class HomeCTRL extends Controller
 
     public function products()
     {
-        $products = Product::orderBy('id', 'DESC')->paginate(2);
+        $products = Product::orderBy('id', 'DESC')->paginate(8);
         $categories = Pcategory::all();
 
         SEOMeta::setTitle('Ürünler');
@@ -82,7 +82,7 @@ class HomeCTRL extends Controller
 
     public function services()
     {
-        $services = Service::orderBy('id', 'DESC')->get();
+        $services = Service::orderBy('id', 'DESC')->paginate(9);
 
         SEOMeta::setTitle('Hizmetler');
         SEOMeta::setDescription('Robomotiv Firmamızın müşterilerimize vermiş olduğu hizmetler.');
@@ -93,17 +93,16 @@ class HomeCTRL extends Controller
     public function service_detail($slug)
     {
         $service = Service::whereSlug($slug)->firstOrFail();
-        $services = Service::limit(6)->orderBy('created_at', 'DESC')->get();
 
         SEOMeta::setTitle($service->title);
         SEOMeta::setDescription(substr(strip_tags($service->content), 0, 150));
 
-        return view('service_detail', compact('service', 'services'));
+        return view('service_detail', compact('service'));
     }
 
     public function projects()
     {
-        $projects = Project::orderBy('id', 'DESC')->get();
+        $projects = Project::orderBy('id', 'DESC')->paginate(9);
 
         SEOMeta::setTitle('Projeler');
         SEOMeta::setDescription('Robomotiv firmamızın yapmış olduğu projeler');
@@ -124,7 +123,7 @@ class HomeCTRL extends Controller
 
     public function blogs()
     {
-        $blogs = Blog::orderBy('id', 'DESC')->paginate(6);
+        $blogs = Blog::orderBy('id', 'DESC')->paginate(4);
         $categories = Bcategory::all();
 
         SEOMeta::setTitle('Bloglar');
@@ -136,7 +135,7 @@ class HomeCTRL extends Controller
     public function blogs_category($category)
     {
         $category = Bcategory::whereSlug($category)->firstOrFail();
-        $blogs = Blog::with('category')->where('category_id', $category->id)->orderBy('id', 'DESC')->paginate(6);
+        $blogs = Blog::with('category')->where('category_id', $category->id)->orderBy('id', 'DESC')->paginate(4);
 
         $categories = Bcategory::all();
 

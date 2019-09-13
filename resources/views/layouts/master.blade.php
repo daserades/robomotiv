@@ -197,10 +197,11 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget clearfix">
                             <div class="footer-logo">
-                                <img id="footer-logo-img" class="img-center" src="images/footer-logo.png" alt="">
+                                <img id="footer-logo-img" class="img-center" src="{{asset('images/footer-logo.png')}}" alt="">
                             </div>
                             <p>{{setting('footer-alani.description')}}</p>
                         </div>
+                        <a href="https://partum.com.tr" target="_blank"><img src="{{asset('images/partum.svg')}}" class="text-right" width="90px;" alt=""></a>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget widget_nav_menu clearfix">

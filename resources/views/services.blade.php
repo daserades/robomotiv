@@ -65,6 +65,11 @@
                     </div>
                     @endforeach
                 </div><!-- row end -->
+                <div class="col-md-12">
+                    <div class="ttm-pagination">
+                        {{$services->links('partials.paginate')}}
+                    </div>
+                </div>
             </div>
         </section>
         <!-- service-section end -->

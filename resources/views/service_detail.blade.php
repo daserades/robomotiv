@@ -57,7 +57,7 @@
                             <h3 class="widget-title">İletişim Bilgileri</h3>
                             <ul class="contact-widget-wrapper">
                                 <li><i class="fa fa-map-marker"></i>{{setting('iletisim.address')}}</li>
-                                <li><i class="fa fa-envelope-o"></i><a href='mailto:{{setting('iletisim.email')}}' target="_blank">{{setting('iletisim.email')}}</a></li>
+                                <li><i class="fa fa-envelope-o"></i><a href='mailto:{{setting('iletisim.email')}}'>{{setting('iletisim.email')}}</a></li>
                                 <li><i class="fa fa-phone"></i>{{setting('iletisim.phone')}}</li>
                             </ul>
                         </aside>
