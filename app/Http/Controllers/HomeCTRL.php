@@ -28,8 +28,8 @@ class HomeCTRL extends Controller
         $blogs = Blog::limit(4)->orderBy('id', 'DESC')->get();
         $products = Product::limit(4)->orderBy('id', 'DESC')->get();
         $services = Service::limit(3)->orderBy('id', 'DESC')->get();
-
-        SEOMeta::setDescription('Linmak Firması resmi web sitesi');
+        SEOMeta::setTitle('Anasayfa');
+        SEOMeta::setDescription('Robomotiv Firması resmi web sitesi');
 
         return view('index', compact('sliders', 'projects', 'blogs', 'products', 'services'));
     }
@@ -37,7 +37,7 @@ class HomeCTRL extends Controller
     public function corporate()
     {
         SEOMeta::setTitle('Kurumsal');
-        SEOMeta::setDescription('Linmak Firması resmi web sitesi');
+        SEOMeta::setDescription('Robomotiv Firması resmi web sitesi');
         $corporates = Corporate::orderBy('id', 'DESC')->get();
         return view('corporate', compact('corporates'));
     }
