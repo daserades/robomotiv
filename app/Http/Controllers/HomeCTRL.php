@@ -16,6 +16,7 @@ use App\Slider;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use TCG\Voyager\Models\Category;
 use function foo\func;
 
@@ -187,9 +188,13 @@ class HomeCTRL extends Controller
 
     public function bulten_post(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'email' => 'required|unique:bultens'
         ]);
+
+        if ($validator->fails()) {
+            return view('fail')->with('title', 'Kayıt İşlemi Başarısız')->with('message', 'Bu e-posta adresi ile daha önceden kayıt işlemi yapılmış.');
+        }
 
         Bulten::create([
             'email' => $request->email,
