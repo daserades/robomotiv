@@ -121,7 +121,7 @@
                                             data-after            = ""
                                             data-after-style      = "sub"
                                     >{{setting('neden-biz.year')}}
-                                    </span>
+                                    </span><span>+</span>
                                 </h4>
                                 <h3 class="ttm-fid-title"><span>YIL<br></span></h3>
                             </div><!-- ttm-fid-contents end-->

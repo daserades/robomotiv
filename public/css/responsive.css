@@ -988,7 +988,7 @@
 
 @media (max-width: 575px){
 
-	.site-branding img{ max-height: 33px; }
+	.site-branding img{ max-height: 50px; }
 
 	/* single-blog */
 	.ttm-post-prev-next-buttons{ text-align: center; }

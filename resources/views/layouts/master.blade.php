@@ -97,9 +97,20 @@
                             <!-- site-branding -->
                             <div class="site-branding">
                                 <a class="home-link" href="{{route('index')}}" title="Boldman" rel="home">
-                                    <img id="logo-img" class="img-center" src="{{asset('images/logo-img.png')}}" alt="logo-img">
+                                    <img id="logo-img" class="img-center" src="{{asset('images/RobomotivSiyahLogo.svg')}}" alt="logo-img">
                                 </a>
                             </div><!-- site-branding end -->
+
+
+
+
+
+
+
+
+
+
+
                             <!--site-navigation -->
                             <div id="site-navigation" class="site-navigation">
                                 <!-- header-icins -->
@@ -197,7 +208,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget clearfix">
                             <div class="footer-logo">
-                                <img id="footer-logo-img" class="img-center" src="{{asset('images/footer-logo.png')}}" alt="">
+                                <img id="footer-logo-img" class="img-center" src="{{asset('images/RobomotivBeyazLogo.svg')}}" alt="">
                             </div>
                             <p>{!! substr(strip_tags(setting('footer-alani.description')), 0, 150) !!}</p>
                         </div>
@@ -240,10 +251,10 @@
                     </div>
                     <div class="social-icons">
                         <ul class="list-inline text-left mr-5">
-                            <li><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-                            <li><a href="{{setting('iletisim.twitter')}}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-                            <li><a href="{{setting('iletisim.youtube')}}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
-                            <li><a href="{{setting('iletisim.linkedin')}}"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
+                            <li><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="{{setting('iletisim.twitter')}}"><i class="ti ti-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="{{setting('iletisim.youtube')}}"><i class="ti ti-youtube" aria-hidden="true"></i></a></li>
+                            <li><a href="{{setting('iletisim.linkedin')}}"><i class="ti ti-linkedin" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>
