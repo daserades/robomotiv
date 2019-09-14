@@ -170,7 +170,7 @@
                                             </div>
                                             <div class="featured-title">
                                                 <h5>Bültenimize Abone Olun</h5>
-                                                <h6>Yeniliklerden Anında Haberiniz Olsun</h6>
+                                                <h6>E-Posta listemize üye olarak yeniliklerden ve kampanyalardan hızlı bir şekilde haber alabilirsiniz.</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -228,14 +228,22 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget flicker_widget clearfix">
-                            <h3 class="widget-title">Hizmetlerimiz</h3>
+                            <h3 class="widget-title">Son Çalışmalar</h3>
                             <div class="ttm-flicker-widget-wrapper">
-                                @foreach($services_footer as $service)
-                                    <a href="{{route('service_detail', ['slug'=>$service->slug])}}">
-                                        <img src="{{Voyager::image($service->thumbnail('cropped'))}}" alt="A photo on Flickr" title="themetech-one" width="100px;" />
+                                @foreach($projects_footer as $projects)
+                                    <a href="{{route('project_detail', ['slug'=>$projects->slug])}}">
+                                        <img src="{{Voyager::image($projects->thumbnail('cropped'))}}" alt="A photo on Flickr" title="themetech-one" width="100px;" />
                                     </a>
                                 @endforeach
                             </div>
+                        </div>
+                        <div class="social-icons">
+                            <ul class="list-inline text-left mr-5">
+                                <li><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('iletisim.twitter')}}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('iletisim.youtube')}}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                                <li><a href="{{setting('iletisim.linkedin')}}"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -248,15 +256,7 @@
                         <span>Copyright © {{date('Y')}}&nbsp;{{setting('footer-alani.copy')}}</span>
                     </div>
                     <div class="col-md-4 ttm-footer2-right">
-                        <div class="social-icons">
-                            <ul class="list-inline">
-                                <a href="https://partum.com.tr" target="_blank"><img src="{{asset('images/partum.svg')}}" class="text-right" width="90px;" alt=""></a>
-                                <li><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('iletisim.twitter')}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('iletisim.youtube')}}"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('iletisim.linkedin')}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
+                        <a href="https://partum.com.tr" target="_blank"><img src="{{asset('images/partum.svg')}}" width="90px;" alt=""></a>
                     </div>
                 </div>
             </div>
