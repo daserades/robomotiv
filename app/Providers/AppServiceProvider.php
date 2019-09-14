@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
     {
         setLocale(LC_TIME, 'tr-TR');
 
-        View::share('projects_footer', Project::limit(5)->orderBy('id', 'DESC')->get());
+        View::share('projects_footer', Project::limit(4)->orderBy('id', 'DESC')->get());
 
         view()->composer(['blogs', 'blogs_category', 'blog_detail'], function ($view){
             $view->with('popular_posts', Blog::popularLast(3)->limit(6)->get());

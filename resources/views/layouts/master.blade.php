@@ -199,7 +199,7 @@
                             <div class="footer-logo">
                                 <img id="footer-logo-img" class="img-center" src="{{asset('images/footer-logo.png')}}" alt="">
                             </div>
-                            <p>{{setting('footer-alani.description')}}</p>
+                            <p>{!! substr(strip_tags(setting('footer-alani.description')), 0, 150) !!}</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
@@ -226,7 +226,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-3 widget-area">
                         <div class="widget flicker_widget clearfix">
                             <h3 class="widget-title">Son Çalışmalar</h3>
                             <div class="ttm-flicker-widget-wrapper">
@@ -237,14 +237,14 @@
                                 @endforeach
                             </div>
                         </div>
-                        <div class="social-icons">
-                            <ul class="list-inline text-left mr-5">
-                                <li><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('iletisim.twitter')}}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('iletisim.youtube')}}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
-                                <li><a href="{{setting('iletisim.linkedin')}}"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <ul class="list-inline text-left mr-5">
+                            <li><a href="{{setting('iletisim.facebook')}}"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                            <li><a href="{{setting('iletisim.twitter')}}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                            <li><a href="{{setting('iletisim.youtube')}}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                            <li><a href="{{setting('iletisim.linkedin')}}"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
