@@ -315,7 +315,7 @@
                                                         data-before-style     = "sup"
                                                         data-after            = ""
                                                         data-after-style      = "sub"
-                                                >30</span><span>+</span>
+                                                >{{setting('neden-biz.year')}}</span>
                                             </h4>
                                         </div>
                                         <div class="ttm-fid-contents">
@@ -339,7 +339,7 @@
                                                         data-before-style     = "sup"
                                                         data-after            = ""
                                                         data-after-style      = "sub"
-                                                >120</span><span>+</span>
+                                                >{{setting('neden-biz.customer')}}</span><span>+</span>
                                             </h4>
                                         </div>
                                         <div class="ttm-fid-contents">
@@ -363,7 +363,7 @@
                                                         data-before-style     = "sup"
                                                         data-after            = ""
                                                         data-after-style      = "sub"
-                                                >350</span><span>+</span>
+                                                >{{setting('neden-biz.project')}}</span><span>+</span>
                                             </h4>
                                         </div>
                                         <div class="ttm-fid-contents">

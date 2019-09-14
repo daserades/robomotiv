@@ -80,7 +80,7 @@
                             @if($service->gallery != null)
                                 @foreach(json_decode($service->gallery) as $detail)
                                     <div class="ttm_single_image-wrapper mb-35">
-                                        <img src="{{ Voyager::image($service->getThumbnail($detail, 'cropped')) }}" style="width: 800px; height: 500px;" alt=""/>
+                                        <img src="{{ Voyager::image($service->getThumbnail($detail, 'cropped')) }}" style="width: 100%;" alt=""/>
                                     </div>
                                 @endforeach
                             @endif
