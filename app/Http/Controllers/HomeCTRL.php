@@ -26,8 +26,8 @@ class HomeCTRL extends Controller
     {
         $sliders = Slider::orderBy('id', 'DESC')->get();
         $projects = Project::limit(6)->orderBy('id', 'DESC')->get();
-        $blogs = Blog::limit(4)->orderBy('id', 'DESC')->get();
-        $products = Product::limit(4)->orderBy('id', 'DESC')->get();
+        $blogs = Blog::limit(6)->orderBy('id', 'DESC')->get();
+        $products = Product::limit(6)->orderBy('id', 'DESC')->get();
         $services = Service::limit(3)->orderBy('id', 'DESC')->get();
         SEOMeta::setTitle('Anasayfa');
         SEOMeta::setDescription('Robomotiv Firması resmi web sitesi');

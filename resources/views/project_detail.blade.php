@@ -84,21 +84,18 @@
             </div>
         </section>
 
-        <section class="ttm-row pt-50 pb-280 ttm-bgcolor-grey clearfix">
+        <section class="ttm-row ttm-bgcolor-grey clearfix">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <h4>Proje Özeti</h4>
-                        <p>{!! substr(strip_tags($project->summery), 0, 600) !!}</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p>{!! substr(strip_tags($project->summery), 600) !!}</p>
+                        <p>{!! $project->summery !!}</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="ttm-row pt-50 pb-0 res-991-pt-0 res-991-pb-0 clearfix">
+        <section class="ttm-row mt-50 pt-50 pb-0 res-991-pt-0 res-991-pb-0 clearfix">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

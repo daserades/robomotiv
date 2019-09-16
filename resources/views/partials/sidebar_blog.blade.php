@@ -3,7 +3,7 @@
         @csrf
         <label>
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="input-text" placeholder="Search …" value="" name="keyword">
+            <input type="search" class="input-text" placeholder="Ara …" value="" name="keyword">
         </label>
         <input type="submit" class="search-submit" value="Search">
     </form>

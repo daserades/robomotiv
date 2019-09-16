@@ -32,7 +32,6 @@
                          data-paddingbottom="[0,0,0,0]"
                          data-paddingleft="[0,0,0,0]">{{$slider->title}}</div>
 
-
                     <div class="tp-caption tp-resizeme gvv_bg gvv_color"  id="slide-3-layer-1-@php echo $i; @endphp"  data-x="['left','left','center','center']" data-hoffset="['50','40','-142','-473']" data-y="['top','top','middle','middle']" data-voffset="['379','389','44','76']"
 
                          data-fontsize="['22','22','19','19']"
@@ -49,12 +48,12 @@
                          data-paddingtop="[0,0,0,0]"
                          data-paddingright="[0,0,0,0]"
                          data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"> {!! substr(strip_tags($slider->description), 0, 100) !!} . . . </div>
+                         data-paddingleft="[0,0,0,0]">@if(strlen($slider->description)>100) {!! substr(strip_tags($slider->description), 0, 100) !!} . . . @else {!! substr(strip_tags($slider->description), 0, 100) !!} @endif </div>
 
 
                     @if($slider->link != null)
                         <a class="tp-caption skin-flat-button tp-resizeme" href="{{$slider->link}}"
-                           target="_self" data-x="['left','left','center','center']"
+                           target="_blank" data-x="['left','left','center','center']"
                            data-hoffset="['50','40','0','0']" data-y="['top','top','middle','middle']"
                            data-voffset="['452','462','121','69']"
                            data-fontsize="['13','13','12','11']"
@@ -461,7 +460,7 @@
                             </div>
                             <div class="featured-content featured-content-post">
                                 <div class="post-meta">
-                                    <span class="ttm-meta-line"><i class="fa fa-calendar"></i><a href="{{route('blog_detail', ['category'=>$blog->category->slug, 'slug'=>$blog->slug])}}">January 16, 2019</a></span>
+                                    <span class="ttm-meta-line"><i class="fa fa-calendar"></i><a href="{{route('blog_detail', ['category'=>$blog->category->slug, 'slug'=>$blog->slug])}}">{{$blog->created_at->format('d-m-Y')}}</a></span>
                                 </div>
                                 <div class="post-title featured-title">
                                     <h5><a href="{{route('blog_detail', ['category'=>$blog->category->slug, 'slug'=>$blog->slug])}}">{{$blog->title}}</a></h5>

@@ -70,11 +70,17 @@
                                 <div class="title-header">
                                     <h5></h5>
                                     <h2 class="title">{{$service->title}}</h2>
+                                    <span class="sep_holder m-0 mb-35"><span class="sep_line"></span></span>
                                 </div>
                             </div><!-- section title end -->
                             <div class="ttm-service-description">
+                                <h5 class="title">Açıklama</h5>
                                 <div class="mb-35">
                                     <p>{!! $service->description !!}</p>
+                                </div>
+                                <h5 class="title">İçerik</h5>
+                                <div class="mb-35">
+                                    <p>{!! $service->content !!}</p>
                                 </div>
                             </div>
                             @if($service->gallery != null)
@@ -84,9 +90,6 @@
                                     </div>
                                 @endforeach
                             @endif
-                            <div class="mb-35">
-                                <p>{!! $service->content !!}</p>
-                            </div>
                             <div class="sep_holder_box width-100">
                                 <span class="sep_holder m-0 mb-35"><span class="sep_line"></span></span>
                                 <span class="sep_holder m-0 mb-35"><span class="sep_line"></span></span>
