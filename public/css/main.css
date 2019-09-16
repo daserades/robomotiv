@@ -1020,7 +1020,7 @@ a.ttm-btn.ttm-btn-color-skincolor.btn-inline:hover{ color: #313131; }
     left: 0;
     display: block;
     background: #fff;
-    background-image: url(../images/pre-loader-1.gif);
+    background-image: url(../images/loader.gif);
     background-repeat: no-repeat;
     background-position: center;
 }

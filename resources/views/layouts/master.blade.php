@@ -9,7 +9,7 @@
     {!! SEOMeta::generate() !!}
 
     <!-- favicon icon -->
-    <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" />
+    <link rel="shortcut icon" href="{{asset('images/robomotiv-icon.png')}}" />
 
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}"/>
